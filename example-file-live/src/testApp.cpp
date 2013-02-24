@@ -10,6 +10,9 @@ void testApp::setup()
     cam.setDistance(80);
     cam.lookAt(ofVec3f(0, 20, 0));
     
+    light.setPosition(500, 500, 500);
+    light.enable();
+    
     selected = 0;
     dir.listDir("");
     dir.sort();
@@ -31,9 +34,15 @@ void testApp::update()
 void testApp::draw()
 {
     ofSetColor(255, 255, 255);
+    
+    glPushAttrib(GL_ENABLE_BIT);
+    glEnable(GL_DEPTH_TEST);
+    
     cam.begin();
     generator.draw();
     cam.end();
+    
+    glPopAttrib();
     
     for (unsigned i = 0; i < fileNames.size(); ++i)
     {

@@ -40,8 +40,6 @@ namespace itg
     public:
         typedef shared_ptr<LineAction> Ptr;
         
-        LineAction(const string& nextRuleName = "", const ofMatrix4x4& transform = ofMatrix4x4());
-        
         Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh);
     };
 }

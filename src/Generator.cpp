@@ -34,6 +34,7 @@
 #include "LineAction.h"
 #include "TransformAction.h"
 #include "PointAction.h"
+#include "CubeAction.h"
 
 namespace itg
 {
@@ -43,6 +44,7 @@ namespace itg
         registerAction<LineAction>("line");
         registerAction<PointAction>("point");
         registerAction<TransformAction>("transform");
+        registerAction<CubeAction>("cube");
        
         mesh.setUsage(GL_DYNAMIC_DRAW);
         mesh.setMode(OF_PRIMITIVE_TRIANGLES);
@@ -60,7 +62,7 @@ namespace itg
         
         for (list<Branch::Ptr>::iterator it = branches.begin(); it != branches.end(); ++it)
         {
-            if ((*it)->getDepth() < maxDepth)
+            if ((*it)->getDepth() < maxDepth && !(*it)->getNextRuleName().empty())
             {
                 RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
                 

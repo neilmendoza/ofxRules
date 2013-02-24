@@ -1,5 +1,5 @@
 /*
- *  LineAction.cpp
+ *  CubeAction.h
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -29,15 +29,29 @@
  *  POSSIBILITY OF SUCH DAMAGE. 
  *
  */
-#include "LineAction.h"
+#pragma once
+
+#include "ofMain.h"
+#include "Branch.h"
+#include "TransformAction.h"
 
 namespace itg
 {
-    Branch::Ptr LineAction::step(Branch::Ptr branch, ofMesh& mesh)
+    class CubeAction : public TransformAction
     {
-        Branch::Ptr newBranch = TransformAction::step(branch, mesh);
-        mesh.addVertex(ofVec3f() * newBranch->getPrevTransform());
-        mesh.addVertex(ofVec3f() * newBranch->getTransform());
-        return newBranch;
-    }
+    public:
+        typedef shared_ptr<CubeAction> Ptr;
+        
+        static const ofVec3f NORMALS[];
+        static const ofIndexType INDICES[];
+        
+        Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh);
+    
+        void load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx);
+        
+        void setSize(float size);
+        
+    private:
+        vector<ofVec3f> vertices;
+    };
 }

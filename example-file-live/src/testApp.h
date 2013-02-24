@@ -22,6 +22,7 @@ public:
     void gotMessage(ofMessage msg);
     
 private:
+    ofLight light;
     ofEasyCam cam;
     ofxGenerator generator;
     vector<string> fileNames;
