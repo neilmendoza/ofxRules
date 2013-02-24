@@ -59,6 +59,8 @@ namespace itg
             return action;
         }
         
+        void addAction(Action::Ptr action) { actions.push_back(action); }
+        
         unsigned size() const { return actions.size(); }
 
         Action::Ptr operator[](unsigned i) const { return actions[i]; }

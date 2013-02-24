@@ -43,10 +43,7 @@ namespace itg
         LineAction(const string& nextRuleName = "", const ofMatrix4x4& transform = ofMatrix4x4());
         
         Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh);
-        
-        static Action::Ptr load(ofxXmlSettings& xml, unsigned idx) {}
-        static void save(ofxXmlSettings& xml) {}
-        
     private:
+
     };
 }

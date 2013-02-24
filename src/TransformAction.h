@@ -60,13 +60,7 @@ namespace itg
         ofMatrix4x4 getTransform() const { return transform; }
         void setTransform(const ofMatrix4x4& transform) { this->transform = transform; }
         
-        //void setNext(const string& next) { this->next = next; }
-        //string getNext() const { return next; }
-        
     private:
         ofMatrix4x4 transform;
-        //string next;
-        
-        //ofVboMesh mesh;
     };
 }

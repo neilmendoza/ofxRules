@@ -62,8 +62,8 @@ namespace itg
                     for (unsigned k = 0; k < xml.getNumTags(it->first); ++k)
                     {
                         Action::Ptr action = (this->*it->second)();
-                        //action->load(xml, k);
-                        //rule->addAction<<#class T#>>(<#const string &nextRuleName#>)
+                        action->load(xml, k);
+                        rule->addAction(action);
                     }
                 }
                 xml.popTag();

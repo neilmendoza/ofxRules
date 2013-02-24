@@ -36,4 +36,14 @@ namespace itg
     Action::Action(const string& nextRuleName) : nextRuleName(nextRuleName)
     {
     }
+    
+    void Action::load(ofxXmlSettings& xml, unsigned tagNum)
+    {
+        ofLogError() << "Undefined action load function called";
+    }
+    
+    void Action::save(ofxXmlSettings& xml)
+    {
+        ofLogError() << "Undefined action save function called";
+    }
 }

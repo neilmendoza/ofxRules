@@ -49,10 +49,11 @@ namespace itg
         
         virtual Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh) = 0;
         
+        void setNextRuleName(const string& nextRuleName) { this->nextRuleName = nextRuleName; }
         string getNextRuleName() const { return nextRuleName; }
         
-        void load(ofxXmlSettings& xml, unsigned tagNum) {}
-        void save(ofxXmlSettings& xml) {}
+        void load(ofxXmlSettings& xml, unsigned tagNum);
+        void save(ofxXmlSettings& xml);
         
     private:
         string nextRuleName;
