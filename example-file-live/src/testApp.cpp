@@ -9,15 +9,14 @@ void testApp::setup()
     cam.setFarClip(1e4);
     cam.setDistance(80);
     cam.lookAt(ofVec3f(0, 20, 0));
-
-//    mesh.setUsage(GL_DYNAMIC_DRAW);
-//    mesh.setMode(OF_PRIMITIVE_LINES);
     
-    generator.watchFile("test.xml");
-    
-    ofDirectory dir;
+    selected = 0;
     dir.listDir("");
     dir.sort();
+    for (unsigned i = 0; i < dir.size(); ++i)
+    {
+        fileNames.push_back(dir.getName(i));
+    }
 }
 
 //--------------------------------------------------------------
@@ -31,14 +30,40 @@ void testApp::update()
 //--------------------------------------------------------------
 void testApp::draw()
 {
+    ofSetColor(255, 255, 255);
     cam.begin();
     generator.draw();
     cam.end();
+    
+    for (unsigned i = 0; i < fileNames.size(); ++i)
+    {
+        if (i == selected) ofSetColor(0, 255, 0);
+        else ofSetColor(255, 0, 0);
+        ofDrawBitmapString(fileNames[i], 10, 20 * (i + 1));
+    }
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
-
+void testApp::keyPressed(int key)
+{
+    switch (key)
+    {
+        case OF_KEY_RETURN:
+            generator.watchFile(fileNames[selected]);
+            break;
+        
+        case OF_KEY_UP:
+            selected = (selected - 1);
+            if (selected < 0) selected = fileNames.size() - 1;
+            break;
+        
+        case OF_KEY_DOWN:
+            selected = (selected + 1) % fileNames.size();
+            break;
+            
+        default:
+            break;
+    }
 }
 
 //--------------------------------------------------------------

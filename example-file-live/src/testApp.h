@@ -24,6 +24,7 @@ public:
 private:
     ofEasyCam cam;
     ofxGenerator generator;
-    //ofVboMesh mesh;
-    vector<ofFile> files;
+    vector<string> fileNames;
+    ofDirectory dir;
+    int selected;
 };
