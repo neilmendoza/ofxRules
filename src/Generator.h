@@ -1,5 +1,5 @@
 /*
- *  Structure.h
+ *  Generator.h
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -37,10 +37,13 @@
 
 namespace itg
 {
-    class Structure
+    class Generator
     {
     public:
-        Structure();
+        typedef Action::Ptr (Generator::*ActionCreator)();
+        typedef map<string, ActionCreator>::iterator CreatorIt;
+        
+        Generator();
         
         Rule::Ptr addRule(const string& ruleName, float weight);
         Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
@@ -48,9 +51,25 @@ namespace itg
         
         void setMaxDepth(unsigned maxDepth) { this->maxDepth = maxDepth; }
         
+        void load(const string& fileName);
+        
+        template<class T>
+        Action::Ptr createAction()
+        {
+            return typename T::Ptr(new T);
+        }
+
+        template<class T>
+        void registerAction(const string& tagName)
+        {
+            creators[tagName] = &Generator::createAction<T>;
+        }
+        
     private:
         map<string, RuleSet::Ptr> ruleSets;
         list<Branch::Ptr> branches;
         unsigned maxDepth;
+        
+        map<string, ActionCreator> creators;
     };
 }

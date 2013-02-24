@@ -52,7 +52,7 @@ namespace itg
         float getWeight() const { return weight; }
         
         template<class T>
-        typename T::Ptr addAction(const string& nextRuleName)
+        typename T::Ptr addAction(const string& nextRuleName = "")
         {
             typename T::Ptr action = typename T::Ptr(new T(nextRuleName));
             actions.push_back(action);

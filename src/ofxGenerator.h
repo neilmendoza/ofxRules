@@ -1,5 +1,5 @@
 /*
- *  Structure.cpp
+ *  ofxGenerator.h
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -29,46 +29,8 @@
  *  POSSIBILITY OF SUCH DAMAGE. 
  *
  */
-#include "Structure.h"
+#pragma once
 
-namespace itg
-{
-    Structure::Structure() : maxDepth(numeric_limits<unsigned>::max())
-    {
-    }
-    
-    Rule::Ptr Structure::addRule(const string& ruleName, float weight)
-    {
-        if (!ruleSets[ruleName]) ruleSets[ruleName] = RuleSet::Ptr(new RuleSet(ruleName));
-        ruleSets[ruleName]->addRule(Rule::Ptr(new Rule(weight)));
-        return ruleSets[ruleName]->back();
-    }
-    
-    Branch::Ptr Structure::addBranch(const string& ruleName, const ofMatrix4x4& transform)
-    {
-        Branch::Ptr branch = Branch::Ptr(new Branch(ruleName, 0, transform));
-        branches.push_back(branch);
-        return branch;
-    }
+#include "Generator.h"
 
-    void Structure::step(ofMesh& mesh)
-    {
-        if (branches.front()->getDepth() < maxDepth)
-        {
-            list<Branch::Ptr> newBranches;
-            
-            for (list<Branch::Ptr>::iterator it = branches.begin(); it != branches.end(); ++it)
-            {
-                RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
-                
-                vector<Branch::Ptr> children = ruleSet->randomRule()->step(*it, mesh);
-                
-                newBranches.insert(newBranches.end(), children.begin(), children.end());
-            }
-            
-            //if (newBranches.size() > 10) newBranches.pop_front();
-            
-            branches = newBranches;
-        }
-    }
-}
+typedef itg::Generator ofxGenerator;

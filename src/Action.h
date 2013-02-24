@@ -32,6 +32,7 @@
 #pragma once
 
 #include <tr1/memory>
+#include "ofxXmlSettings.h"
 #include "Branch.h"
 
 namespace itg
@@ -43,12 +44,15 @@ namespace itg
     public:
         typedef shared_ptr<Action> Ptr;
         
-        Action(const string& nextRuleName);
+        Action(const string& nextRuleName = "");
         virtual ~Action() {}
         
         virtual Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh) = 0;
         
         string getNextRuleName() const { return nextRuleName; }
+        
+        void load(ofxXmlSettings& xml, unsigned tagNum) {}
+        void save(ofxXmlSettings& xml) {}
         
     private:
         string nextRuleName;
