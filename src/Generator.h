@@ -45,9 +45,11 @@ namespace itg
         
         Generator();
         
-        Rule::Ptr addRule(const string& ruleName, float weight);
-        Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
         void step(ofMesh& mesh);
+        
+        Rule::Ptr addRule(const string& ruleName, float weight);
+        
+        Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
         
         void setMaxDepth(unsigned maxDepth) { this->maxDepth = maxDepth; }
         
@@ -69,7 +71,6 @@ namespace itg
         map<string, RuleSet::Ptr> ruleSets;
         list<Branch::Ptr> branches;
         unsigned maxDepth;
-        
         map<string, ActionCreator> creators;
     };
 }

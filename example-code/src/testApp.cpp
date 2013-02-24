@@ -16,10 +16,10 @@ namespace itg
         cam.setDistance(80);
         cam.lookAt(ofVec3f(0, 20, 0));
        
-        structure.setMaxDepth(300);
+        generator.setMaxDepth(300);
         
         {
-            Rule::Ptr rule = structure.addRule("test", 100);
+            Rule::Ptr rule = generator.addRule("test", 100);
             
             LineAction::Ptr action = rule->addAction<LineAction>("test");
             action->translate(0, 0.1, 0);
@@ -27,7 +27,7 @@ namespace itg
         }
        
         {
-            Rule::Ptr rule = structure.addRule("test", 100);
+            Rule::Ptr rule = generator.addRule("test", 100);
             
             LineAction::Ptr action = rule->addAction<LineAction>("test");
             action->translate(0, 0.1, 0);
@@ -35,7 +35,7 @@ namespace itg
         }
         
         {
-            Rule::Ptr rule = structure.addRule("test", 100);
+            Rule::Ptr rule = generator.addRule("test", 100);
             
             LineAction::Ptr action = rule->addAction<LineAction>("test");
             action->translate(0, 0.4, 0);
@@ -43,7 +43,7 @@ namespace itg
         }
         
         {
-            Rule::Ptr rule = structure.addRule("test", 6);
+            Rule::Ptr rule = generator.addRule("test", 6);
             
             TransformAction::Ptr left = rule->addAction<TransformAction>("test");
             left->rotate(0, 180, 0);
@@ -52,7 +52,7 @@ namespace itg
             left->rotate(15, 0, 0);
         }
        
-        structure.addBranch("test");
+        generator.addBranch("test");
         
         mesh.setUsage(GL_DYNAMIC_DRAW);
         mesh.setMode(OF_PRIMITIVE_LINES);
@@ -63,7 +63,7 @@ namespace itg
     {
         ofSetWindowTitle(ofToString(ofGetFrameRate(), 2));
         
-        structure.step(mesh);
+        generator.step(mesh);
     }
 
     //--------------------------------------------------------------

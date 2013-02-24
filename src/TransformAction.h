@@ -42,7 +42,7 @@ namespace itg
     public:
         typedef shared_ptr<TransformAction> Ptr;
         
-        TransformAction(const string& nextRuleName, const ofMatrix4x4& transform = ofMatrix4x4());
+        TransformAction(const string& nextRuleName = "", const ofMatrix4x4& transform = ofMatrix4x4());
         
         virtual Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh);
         

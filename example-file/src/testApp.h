@@ -22,5 +22,7 @@ public:
     void gotMessage(ofMessage msg);
     
 private:
+    ofEasyCam cam;
     ofxGenerator generator;
+    ofVboMesh mesh;
 };

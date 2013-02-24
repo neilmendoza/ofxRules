@@ -1,18 +1,36 @@
 #include "testApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void testApp::setup()
+{
+    ofBackground(0);
+    
+    cam.setNearClip(1e-2);
+    cam.setFarClip(1e4);
+    cam.setDistance(80);
+    cam.lookAt(ofVec3f(0, 20, 0));
 
+    mesh.setUsage(GL_DYNAMIC_DRAW);
+    mesh.setMode(OF_PRIMITIVE_LINES);
+    
+    generator.load("test.xml");
+    generator.addBranch("test");
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
-
+void testApp::update()
+{
+    ofSetWindowTitle(ofToString(ofGetFrameRate(), 2));
+    
+    generator.step(mesh);
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
-
+void testApp::draw()
+{
+    cam.begin();
+    mesh.draw();
+    cam.end();
 }
 
 //--------------------------------------------------------------

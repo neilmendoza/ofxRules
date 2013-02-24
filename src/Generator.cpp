@@ -41,17 +41,21 @@ namespace itg
     Generator::Generator() : maxDepth(numeric_limits<unsigned>::max())
     {
         registerAction<LineAction>("line");
+        registerAction<PointAction>("point");
+        registerAction<TransformAction>("transform");
     }
     
     void Generator::load(const string& fileName)
     {
         ofxXmlSettings xml;
         xml.loadFile(fileName);
+        setMaxDepth(xml.getAttribute("rules", "maxDepth", (int)numeric_limits<unsigned>::max()));
         xml.pushTag("rules");
         for (unsigned i = 0; i < xml.getNumTags("ruleSet"); ++i)
         {
-            xml.pushTag("ruleSet", i);
             string name = xml.getAttribute("ruleSet", "name", "", i);
+            xml.pushTag("ruleSet", i);
+            
             for (unsigned j = 0; j < xml.getNumTags("rule"); ++j)
             {
                 Rule::Ptr rule = addRule(name, xml.getAttribute("rule", "weight", 0.f, j));

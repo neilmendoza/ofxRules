@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "Branch.h"
 #include "RuleSet.h"
-#include "Structure.h"
+#include "ofxGenerator.h"
 
 namespace itg
 {
@@ -26,11 +26,8 @@ namespace itg
 
     private:
         Branch::Ptr createBranch(Rule::Ptr rule);
-        
         ofVboMesh mesh;
-        
         ofEasyCam cam;
-        
-        Structure structure;
+        ofxGenerator generator;
     };
 }

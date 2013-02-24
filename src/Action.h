@@ -52,8 +52,8 @@ namespace itg
         void setNextRuleName(const string& nextRuleName) { this->nextRuleName = nextRuleName; }
         string getNextRuleName() const { return nextRuleName; }
         
-        void load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum);
-        void save(ofxXmlSettings& xml);
+        virtual void load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum);
+        virtual void save(ofxXmlSettings& xml);
         
     private:
         string nextRuleName;
