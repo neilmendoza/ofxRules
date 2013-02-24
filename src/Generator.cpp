@@ -37,12 +37,47 @@
 
 namespace itg
 {
-    
-    Generator::Generator() : maxDepth(numeric_limits<unsigned>::max())
+    Generator::Generator() :
+        maxDepth(numeric_limits<unsigned>::max())
     {
         registerAction<LineAction>("line");
         registerAction<PointAction>("point");
         registerAction<TransformAction>("transform");
+       
+        mesh.setUsage(GL_DYNAMIC_DRAW);
+        mesh.setMode(OF_PRIMITIVE_TRIANGLES);
+    }
+    
+    
+    void Generator::step()
+    {
+        step(mesh);
+    }
+    
+    void Generator::step(ofMesh& mesh)
+    {
+        list<Branch::Ptr> newBranches;
+        
+        for (list<Branch::Ptr>::iterator it = branches.begin(); it != branches.end(); ++it)
+        {
+            if ((*it)->getDepth() < maxDepth)
+            {
+                RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
+                
+                vector<Branch::Ptr> children = ruleSet->randomRule()->step(*it, mesh);
+                
+                newBranches.insert(newBranches.end(), children.begin(), children.end());
+            }
+        }
+        
+        //if (newBranches.size() > 10) newBranches.pop_front();
+        
+        branches = newBranches;
+    }
+    
+    void Generator::draw()
+    {
+        mesh.draw();
     }
     
     void Generator::load(const string& fileName)
@@ -50,6 +85,17 @@ namespace itg
         ofxXmlSettings xml;
         xml.loadFile(fileName);
         setMaxDepth(xml.getAttribute("rules", "maxDepth", (int)numeric_limits<unsigned>::max()));
+        string primitive = xml.getAttribute("rules", "primitive", "");
+        if (!primitive.empty())
+        {
+            if (primitive == "triangles") mesh.setMode(OF_PRIMITIVE_TRIANGLES);
+            else if (primitive == "triangle_strip") mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+            else if (primitive == "triangle_fan") mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
+            else if (primitive == "lines") mesh.setMode(OF_PRIMITIVE_LINES);
+            else if (primitive == "line_strip") mesh.setMode(OF_PRIMITIVE_LINE_STRIP);
+            else if (primitive == "line_loop") mesh.setMode(OF_PRIMITIVE_LINE_LOOP);
+            else if (primitive == "points") mesh.setMode(OF_PRIMITIVE_POINTS);
+        }
         xml.pushTag("rules");
         for (unsigned i = 0; i < xml.getNumTags("ruleSet"); ++i)
         {
@@ -74,44 +120,36 @@ namespace itg
             }
             xml.popTag();
         }
-        
-        /*structure.setMaxDepth(300);
-        
-        {
-            Rule::Ptr rule = structure.addRule("test", 100);
-            
-            LineAction::Ptr action = rule->addAction<LineAction>("test");
-            action->translate(0, 0.1, 0);
-            action->rotate(1, 0, 0);
-        }
-        
-        {
-            Rule::Ptr rule = structure.addRule("test", 100);
-            
-            LineAction::Ptr action = rule->addAction<LineAction>("test");
-            action->translate(0, 0.1, 0);
-            action->rotate(0, 20, 0);
-        }
-        
-        {
-            Rule::Ptr rule = structure.addRule("test", 100);
-            
-            LineAction::Ptr action = rule->addAction<LineAction>("test");
-            action->translate(0, 0.4, 0);
-            action->rotate(1, 0, -2);
-        }
-        
-        {
-            Rule::Ptr rule = structure.addRule("test", 6);
-            
-            TransformAction::Ptr left = rule->addAction<TransformAction>("test");
-            left->rotate(0, 180, 0);
-            
-            TransformAction::Ptr right = rule->addAction<TransformAction>("test");
-            left->rotate(15, 0, 0);
-        }*/
-        
+    }
+    
+    void Generator::watchFile(const string& fileName)
+    {
+        ofFile file(ofToDataPath(fileName));
+        watchFile(file);
+    }
+    
+    void Generator::watchFile(const ofFile& watchedFile, bool autoCheck)
+    {
+        this->watchedFile = watchedFile;
+        watchedLastModified = Poco::Timestamp(0);
+        if (autoCheck) ofAddListener(ofEvents().update, this, &Generator::onUpdate);
+    }
 
+    void Generator::onUpdate(ofEventArgs& args)
+    {
+        checkWatchedFile();
+    }
+    
+    void Generator::checkWatchedFile()
+    {
+        if (watchedFile.getPocoFile().getLastModified() > watchedLastModified)
+        {
+            mesh.clear();
+            load(watchedFile.getAbsolutePath());
+            branches.clear();
+            addBranch("test");
+            watchedLastModified = watchedFile.getPocoFile().getLastModified();
+        }
     }
     
     Rule::Ptr Generator::addRule(const string& ruleName, float weight)
@@ -126,26 +164,5 @@ namespace itg
         Branch::Ptr branch = Branch::Ptr(new Branch(ruleName, 0, transform));
         branches.push_back(branch);
         return branch;
-    }
-
-    void Generator::step(ofMesh& mesh)
-    {
-        if (branches.front()->getDepth() < maxDepth)
-        {
-            list<Branch::Ptr> newBranches;
-            
-            for (list<Branch::Ptr>::iterator it = branches.begin(); it != branches.end(); ++it)
-            {
-                RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
-                
-                vector<Branch::Ptr> children = ruleSet->randomRule()->step(*it, mesh);
-                
-                newBranches.insert(newBranches.end(), children.begin(), children.end());
-            }
-            
-            //if (newBranches.size() > 10) newBranches.pop_front();
-            
-            branches = newBranches;
-        }
     }
 }

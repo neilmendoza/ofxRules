@@ -1,0 +1,2 @@
+ofxGenerator
+ofxXmlSettings

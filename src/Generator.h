@@ -45,7 +45,10 @@ namespace itg
         
         Generator();
         
+        void step();
         void step(ofMesh& mesh);
+        
+        void draw();
         
         Rule::Ptr addRule(const string& ruleName, float weight);
         
@@ -54,6 +57,11 @@ namespace itg
         void setMaxDepth(unsigned maxDepth) { this->maxDepth = maxDepth; }
         
         void load(const string& fileName);
+        
+        void watchFile(const string& fileName);
+        void watchFile(const ofFile& watchedFile, bool autoCheck = true);
+        
+        void checkWatchedFile();
         
         template<class T>
         Action::Ptr createAction()
@@ -68,9 +76,13 @@ namespace itg
         }
         
     private:
+        void onUpdate(ofEventArgs& args);
         map<string, RuleSet::Ptr> ruleSets;
         list<Branch::Ptr> branches;
         unsigned maxDepth;
         map<string, ActionCreator> creators;
+        Poco::Timestamp watchedLastModified;
+        ofFile watchedFile;
+        ofVboMesh mesh;
     };
 }
