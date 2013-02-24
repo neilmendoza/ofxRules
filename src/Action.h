@@ -52,7 +52,7 @@ namespace itg
         void setNextRuleName(const string& nextRuleName) { this->nextRuleName = nextRuleName; }
         string getNextRuleName() const { return nextRuleName; }
         
-        void load(ofxXmlSettings& xml, unsigned tagNum);
+        void load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum);
         void save(ofxXmlSettings& xml);
         
     private:

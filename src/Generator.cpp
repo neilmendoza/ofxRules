@@ -62,7 +62,7 @@ namespace itg
                     for (unsigned k = 0; k < xml.getNumTags(it->first); ++k)
                     {
                         Action::Ptr action = (this->*it->second)();
-                        action->load(xml, k);
+                        action->load(xml, it->first, k);
                         rule->addAction(action);
                     }
                 }

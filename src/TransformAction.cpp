@@ -39,6 +39,90 @@ namespace itg
         
     }
     
+    void TransformAction::load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx)
+    {
+        setNextRuleName(xml.getAttribute(tagName, "next", "", tagIdx));
+        parseTransforms(xml.getAttribute(tagName, "transforms", "", tagIdx));
+    }
+    
+    /*void TransformAction::save(ofxXmlSettings& xml)
+    {
+        
+    }*/
+    
+    void TransformAction::parseTransforms(const string& transforms)
+    {
+        vector<string> split = ofSplitString(transforms, " ");
+        for (int i = 0; i < split.size(); ++i)
+        {
+            string command = split[i];
+            if (command == "tx")
+            {
+                float x = atof(split[++i].c_str());
+                transform.translate(x, 0, 0);
+            }
+            else if (command == "ty")
+            {
+                float y = atof(split[++i].c_str());
+                transform.translate(0, y, 0);
+            }
+            else if (command == "tz")
+            {
+                float z = atof(split[++i].c_str());
+                transform.translate(0, 0, z);
+            }
+            else if (command == "t")
+            {
+                float x = atof(split[++i].c_str());
+                float y = atof(split[++i].c_str());
+                float z = atof(split[++i].c_str());
+                transform.translate(x, y, z);
+            }
+            else if (command == "rx")
+            {
+                float theta = atof(split[++i].c_str());
+                transform.rotate(theta, 1, 0, 0);
+            }
+            else if (command == "ry")
+            {
+                float theta = atof(split[++i].c_str());
+                transform.rotate(theta, 0, 1, 0);
+            }
+            else if (command == "rz")
+            {
+                float theta = atof(split[++i].c_str());
+                transform.rotate(theta, 0, 0, 1);
+            }
+            else if (command == "sx")
+            {
+                float x = atof(split[++i].c_str());
+                transform.scale(x, 1, 1);
+            }
+            else if (command == "sy")
+            {
+                float y = atof(split[++i].c_str());
+                transform.scale(1, y, 1);
+            }
+            else if (command == "sz")
+            {
+                float z = atof(split[++i].c_str());
+                transform.scale(1, 1, z);
+            }
+            else if (command == "sa")
+            {
+                float s = atof(split[++i].c_str());
+                transform.scale(s, s, s);
+            }
+            else if (command == "s")
+            {
+                float x = atof(split[++i].c_str());
+                float y = atof(split[++i].c_str());
+                float z = atof(split[++i].c_str());
+                transform.scale(x, y, z);
+            }
+        }
+    }
+    
     Branch::Ptr TransformAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         return Branch::Ptr(new Branch(getNextRuleName(), branch->getDepth() + 1, transform * branch->getTransform(), branch->getTransform()));

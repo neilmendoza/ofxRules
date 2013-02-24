@@ -37,7 +37,7 @@ namespace itg
     {
     }
     
-    void Action::load(ofxXmlSettings& xml, unsigned tagNum)
+    void Action::load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum)
     {
         ofLogError() << "Undefined action load function called";
     }

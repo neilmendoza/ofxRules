@@ -60,7 +60,11 @@ namespace itg
         ofMatrix4x4 getTransform() const { return transform; }
         void setTransform(const ofMatrix4x4& transform) { this->transform = transform; }
         
+        void load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx);
+        //void save(ofxXmlSettings& xml, const string& tagName);
+        
     private:
+        void parseTransforms(const string& transforms);
         ofMatrix4x4 transform;
     };
 }

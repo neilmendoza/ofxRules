@@ -163,6 +163,8 @@
 				0940a0c0a49b732381c96429c8c2ec2d /* StopAction.h */,
 				149074a1516243b1b8b341d1a1bb14a5 /* PointAction.cpp */,
 				e148004736ffc0af33dd84aa0c1157b4 /* PointAction.h */,
+				dc9a647281c82e9beaa41d8d34b5d607 /* TransformAction.cpp */,
+				1605a899a92c0dd1ca9e358f7512bcdd /* TransformAction.h */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -297,8 +299,6 @@
 				dd1da542f5322607e28a48cf4e49b8ea /* RuleSet.h */,
 				3dbd64d385d22113c8925f3ef76ad81e /* Generator.cpp */,
 				04b61def12bc7b5ded24721224023b38 /* Generator.h */,
-				dc9a647281c82e9beaa41d8d34b5d607 /* TransformAction.cpp */,
-				1605a899a92c0dd1ca9e358f7512bcdd /* TransformAction.h */,
 				28454C1416D9478100A7845A /* ofxGenerator.h */,
 			);
 			name = src;
