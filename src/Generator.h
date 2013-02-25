@@ -64,7 +64,7 @@ namespace itg
         
         void checkWatchedFile();
         
-        list<Branch::Ptr>& getBranches();
+        list<Branch::Ptr>& getBranches() { return branches; }
         
         template<class T>
         Action::Ptr createAction()
