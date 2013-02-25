@@ -62,6 +62,8 @@ namespace itg
         
         void checkWatchedFile();
         
+        list<Branch::Ptr>& getBranches();
+        
         template<class T>
         Action::Ptr createAction()
         {
@@ -73,6 +75,8 @@ namespace itg
         {
             creators[tagName] = &Generator::createAction<T>;
         }
+        
+        ofEvent<list<Branch::Ptr> > fileReloaded;
         
     private:
         void onUpdate(ofEventArgs& args);
