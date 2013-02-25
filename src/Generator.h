@@ -37,6 +37,8 @@
 
 namespace itg
 {
+    typedef list<Branch::Ptr>::iterator BranchIt;
+    
     class Generator
     {
     public:

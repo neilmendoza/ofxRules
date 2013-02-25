@@ -72,8 +72,6 @@ namespace itg
             }
         }
         
-        //if (newBranches.size() > 10) newBranches.pop_front();
-        
         branches = newBranches;
     }
     
@@ -153,7 +151,7 @@ namespace itg
             mesh.clear();
             load(watchedFileName);
             branches.clear();
-            addBranch("test");
+            ofNotifyEvent(fileReloaded, branches, this);
             watchedLastModified = timestamp;
         }
     }

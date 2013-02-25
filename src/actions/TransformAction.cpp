@@ -50,6 +50,47 @@ namespace itg
         
     }*/
     
+    Branch::Ptr TransformAction::step(Branch::Ptr branch, ofMesh& mesh)
+    {
+        return Branch::Ptr(new Branch(getNextRuleName(), branch->getDepth() + 1, transform * branch->getTransform(), branch->getTransform()));
+    }
+    
+    void TransformAction::translate(const ofVec3f& translation)
+    {
+        transform.translate(translation);
+    }
+
+    void TransformAction::translate(float x, float y, float z)
+    {
+        translate(ofVec3f(x, y, z));
+    }
+    
+    void TransformAction::rotate(const ofQuaternion& rotation)
+    {
+        transform.rotate(rotation);
+    }
+    
+    void TransformAction::rotate(const ofVec3f& euler)
+    {
+        ofQuaternion quat(euler.x, ofVec3f(1,0,0), euler.y, ofVec3f(0,1,0), euler.z, ofVec3f(0,0,1));
+        rotate(quat);
+    }
+    
+    void TransformAction::rotate(float x, float y, float z)
+    {
+        rotate(ofVec3f(x, y, z));
+    }
+    
+    void TransformAction::scale(float scale)
+    {
+        transform.scale(ofVec3f(scale, scale, scale));
+    }
+    
+    void TransformAction::scale(const ofVec3f& scale)
+    {
+        transform.scale(scale);
+    }
+    
     void TransformAction::parseTransforms(const string& transforms)
     {
         vector<string> split = ofSplitString(transforms, " ");
@@ -121,46 +162,5 @@ namespace itg
                 transform.scale(x, y, z);
             }
         }
-    }
-    
-    Branch::Ptr TransformAction::step(Branch::Ptr branch, ofMesh& mesh)
-    {
-        return Branch::Ptr(new Branch(getNextRuleName(), branch->getDepth() + 1, transform * branch->getTransform(), branch->getTransform()));
-    }
-    
-    void TransformAction::translate(const ofVec3f& translation)
-    {
-        transform.translate(translation);
-    }
-
-    void TransformAction::translate(float x, float y, float z)
-    {
-        translate(ofVec3f(x, y, z));
-    }
-    
-    void TransformAction::rotate(const ofQuaternion& rotation)
-    {
-        transform.rotate(rotation);
-    }
-    
-    void TransformAction::rotate(const ofVec3f& euler)
-    {
-        ofQuaternion quat(euler.x, ofVec3f(1,0,0), euler.y, ofVec3f(0,1,0), euler.z, ofVec3f(0,0,1));
-        rotate(quat);
-    }
-    
-    void TransformAction::rotate(float x, float y, float z)
-    {
-        rotate(ofVec3f(x, y, z));
-    }
-    
-    void TransformAction::scale(float scale)
-    {
-        transform.scale(ofVec3f(scale, scale, scale));
-    }
-    
-    void TransformAction::scale(const ofVec3f& scale)
-    {
-        transform.scale(scale);
     }
 }
