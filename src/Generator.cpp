@@ -123,34 +123,38 @@ namespace itg
             xml.popTag();
         }
     }
-    
-    void Generator::watchFile(const string& fileName)
+
+    void Generator::watchFile(const string& watchedFileName, bool autoCheck, float checkPeriod)
     {
-        ofFile file(ofToDataPath(fileName));
-        watchFile(file);
-    }
-    
-    void Generator::watchFile(const ofFile& watchedFile, bool autoCheck)
-    {
-        this->watchedFile = watchedFile;
+        this->watchedFileName = watchedFileName;
         watchedLastModified = Poco::Timestamp(0);
-        if (autoCheck) ofAddListener(ofEvents().update, this, &Generator::onUpdate);
+        if (autoCheck)
+        {
+            lastChecked = 0.f;
+            this->checkPeriod = checkPeriod;
+            ofAddListener(ofEvents().update, this, &Generator::onUpdate);
+        }
     }
 
     void Generator::onUpdate(ofEventArgs& args)
     {
-        checkWatchedFile();
+        if (ofGetElapsedTimef() - lastChecked > checkPeriod)
+        {
+            checkWatchedFile();
+            lastChecked = ofGetElapsedTimef();
+        }
     }
     
     void Generator::checkWatchedFile()
     {
-        if (watchedFile.getPocoFile().getLastModified() > watchedLastModified)
+        Poco::Timestamp timestamp = ofFile(watchedFileName).getPocoFile().getLastModified();
+        if (timestamp > watchedLastModified)
         {
             mesh.clear();
-            load(watchedFile.getAbsolutePath());
+            load(watchedFileName);
             branches.clear();
             addBranch("test");
-            watchedLastModified = watchedFile.getPocoFile().getLastModified();
+            watchedLastModified = timestamp;
         }
     }
     

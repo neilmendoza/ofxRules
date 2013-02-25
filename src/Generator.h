@@ -58,8 +58,7 @@ namespace itg
         
         void load(const string& fileName);
         
-        void watchFile(const string& fileName);
-        void watchFile(const ofFile& watchedFile, bool autoCheck = true);
+        void watchFile(const string& watchedFileName, bool autoCheck = true, float checkPeriod = 0.2f);
         
         void checkWatchedFile();
         
@@ -81,8 +80,12 @@ namespace itg
         list<Branch::Ptr> branches;
         unsigned maxDepth;
         map<string, ActionCreator> creators;
-        Poco::Timestamp watchedLastModified;
-        ofFile watchedFile;
         ofVboMesh mesh;
+        
+        // file watching stuff
+        Poco::Timestamp watchedLastModified;
+        string watchedFileName;
+        float lastChecked;
+        float checkPeriod;
     };
 }
