@@ -54,7 +54,8 @@ namespace itg
         template<class T>
         typename T::Ptr addAction(const string& nextRuleName = "")
         {
-            typename T::Ptr action = typename T::Ptr(new T(nextRuleName));
+            typename T::Ptr action = typename T::Ptr(new T());
+            if (!nextRuleName.empty()) action->setNextRuleName(nextRuleName);
             actions.push_back(action);
             return action;
         }
