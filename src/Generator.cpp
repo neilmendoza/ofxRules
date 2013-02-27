@@ -145,7 +145,8 @@ namespace itg
     
     void Generator::checkWatchedFile()
     {
-        Poco::Timestamp timestamp = ofFile(watchedFileName).getPocoFile().getLastModified();
+        Poco::File file = ofFile(watchedFileName).getPocoFile();
+        Poco::Timestamp timestamp = file.getLastModified();
         if (timestamp > watchedLastModified)
         {
             mesh.clear();

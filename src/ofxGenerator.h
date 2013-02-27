@@ -33,4 +33,6 @@
 
 #include "Generator.h"
 
-typedef itg::Generator ofxGenerator;
+using namespace itg;
+
+typedef Generator ofxGenerator;
