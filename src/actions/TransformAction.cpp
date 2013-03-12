@@ -43,6 +43,7 @@ namespace itg
     {
         setNextRuleName(xml.getAttribute(tagName, "next", "", tagIdx));
         parseTransforms(xml.getAttribute(tagName, "transforms", "", tagIdx));
+        //parseParams(xml.getAttribute(tagName, "transforms", "", tagIdx));
     }
     
     /*void TransformAction::save(ofxXmlSettings& xml)

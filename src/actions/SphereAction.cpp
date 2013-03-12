@@ -1,5 +1,5 @@
 /*
- *  Branch.h
+ *  SphereAction.cpp
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -29,39 +29,13 @@
  *  POSSIBILITY OF SUCH DAMAGE. 
  *
  */
-#pragma once
-
-#include "ofMain.h"
-#include <tr1/memory>
+#include "SphereAction.h"
 
 namespace itg
 {
-    using namespace tr1;
-    
-    class Branch
+    void SphereAction::load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx)
     {
-    public:
-        typedef shared_ptr<Branch> Ptr;
-        
-        Branch(const string& ruleName, unsigned depth = 0, const ofMatrix4x4& transform = ofMatrix4x4(), const ofMatrix4x4& prevTransform = ofMatrix4x4());
-        
-        void step(ofMesh& mesh);
-        
-        string getNextRuleName() const { return nextRuleName; }
-        
-        ofMatrix4x4 getTransform() const { return transform; }
-        
-        ofMatrix4x4 getPrevTransform() const { return prevTransform; }
-        
-        void setDepth(unsigned depth) { this->depth = depth; }
-        unsigned getDepth() { return depth; }
-        
-        
-    private:
-        unsigned depth;
-        string nextRuleName;
-        ofMatrix4x4 transform;
-        ofMatrix4x4 prevTransform;
-        map<string, float> params;
-    };
+        TransformAction::load(xml, tagName, tagIdx);
+        setSize(xml.getAttribute(tagName, "size", 0.1, tagIdx));
+    }
 }
