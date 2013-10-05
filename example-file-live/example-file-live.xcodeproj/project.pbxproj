@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2828F0A917FD7C7F00E0547C /* TubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2828F0A717FD7C7F00E0547C /* TubeAction.cpp */; };
 		2847809B16DA779B00B829C4 /* CubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2847809916DA779B00B829C4 /* CubeAction.cpp */; };
 		28B6890C16DA5A14000B0D15 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28B688F916DA5A14000B0D15 /* Action.cpp */; };
 		28B6890D16DA5A14000B0D15 /* LineAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28B688FB16DA5A14000B0D15 /* LineAction.cpp */; };
@@ -75,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		01dcc0911400f9acf5b65578af4ec8f9 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		2828F0A717FD7C7F00E0547C /* TubeAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TubeAction.cpp; sourceTree = "<group>"; };
+		2828F0A817FD7C7F00E0547C /* TubeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TubeAction.h; sourceTree = "<group>"; };
 		2847809916DA779B00B829C4 /* CubeAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubeAction.cpp; sourceTree = "<group>"; };
 		2847809A16DA779B00B829C4 /* CubeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeAction.h; sourceTree = "<group>"; };
 		28B688F916DA5A14000B0D15 /* Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				28B6890016DA5A14000B0D15 /* StopAction.h */,
 				28B6890116DA5A14000B0D15 /* TransformAction.cpp */,
 				28B6890216DA5A14000B0D15 /* TransformAction.h */,
+				2828F0A717FD7C7F00E0547C /* TubeAction.cpp */,
+				2828F0A817FD7C7F00E0547C /* TubeAction.h */,
 				2847809916DA779B00B829C4 /* CubeAction.cpp */,
 				2847809A16DA779B00B829C4 /* CubeAction.h */,
 			);
@@ -417,6 +422,7 @@
 				28B6891316DA5A14000B0D15 /* Rule.cpp in Sources */,
 				28B6891416DA5A14000B0D15 /* RuleSet.cpp in Sources */,
 				2847809B16DA779B00B829C4 /* CubeAction.cpp in Sources */,
+				2828F0A917FD7C7F00E0547C /* TubeAction.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

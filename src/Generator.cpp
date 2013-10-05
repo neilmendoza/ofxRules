@@ -35,6 +35,7 @@
 #include "TransformAction.h"
 #include "PointAction.h"
 #include "CubeAction.h"
+#include "TubeAction.h"
 
 namespace itg
 {
@@ -45,7 +46,8 @@ namespace itg
         registerAction<PointAction>("point");
         registerAction<TransformAction>("transform");
         registerAction<CubeAction>("cube");
-       
+        registerAction<TubeAction>("tube");
+        
         mesh.setUsage(GL_DYNAMIC_DRAW);
         mesh.setMode(OF_PRIMITIVE_TRIANGLES);
     }
