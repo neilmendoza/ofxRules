@@ -69,18 +69,21 @@ namespace itg
             ofVec3f(-h,-h,-h), ofVec3f(-h,+h,-h), ofVec3f(+h,+h,-h), ofVec3f(+h,-h,-h)
         };
         this->vertices.clear();
-        this->vertices.assign(vertices, vertices + 24);
+        this->vertices.assign(vertices, vertices + NUM_VERTICES);
     }
     
     Branch::Ptr CubeAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
-        mesh.addNormals(NORMALS, 24);
-        unsigned startIdx = mesh.getNumVertices();
+        ofQuaternion quat = newBranch->getTransform().getRotate();
+        for (unsigned i = 0; i < NUM_INDICES; ++i)
+        {
+            mesh.addIndex(INDICES[i] + mesh.getNumVertices());
+        }
         for (unsigned i = 0; i < vertices.size(); ++i)
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
-            mesh.addIndex(INDICES[i] + startIdx);
+            mesh.addNormal(NORMALS[i] * quat);
         }
         return newBranch;
     }

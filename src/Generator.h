@@ -80,6 +80,8 @@ namespace itg
         
         ofEvent<list<Branch::Ptr> > fileReloaded;
         
+        ofVboMesh& getMeshRef() { return mesh; }
+        
     private:
         void onUpdate(ofEventArgs& args);
         map<string, RuleSet::Ptr> ruleSets;

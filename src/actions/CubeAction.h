@@ -42,8 +42,10 @@ namespace itg
     public:
         typedef shared_ptr<CubeAction> Ptr;
         
-        static const ofVec3f NORMALS[];
-        static const ofIndexType INDICES[];
+        static const unsigned NUM_INDICES = 36;
+        static const unsigned NUM_VERTICES = 24;
+        static const ofVec3f NORMALS[NUM_VERTICES];
+        static const ofIndexType INDICES[NUM_INDICES];
         
         Branch::Ptr step(Branch::Ptr branch, ofMesh& mesh);
     
