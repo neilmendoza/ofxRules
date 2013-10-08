@@ -49,10 +49,26 @@ namespace itg
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
         ofQuaternion quat = newBranch->getTransform().getRotate();
-        for (unsigned i = 0; i < vertices.size(); ++i)
+        for (unsigned i = 0; i < resolution; ++i)
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
             mesh.addNormal(normals[i] * quat);
+        }
+        // if not first slice, add triangle
+        if (mesh.getNumVertices() != resolution)
+        {
+            unsigned prevLayerIdx = mesh.getNumVertices() - 2 * resolution;
+            unsigned currLayerIdx = mesh.getNumVertices() - resolution;
+            for (unsigned i = 0; i < resolution; ++i)
+            {
+                mesh.addIndex(prevLayerIdx + i);
+                mesh.addIndex(prevLayerIdx + (i + 1) % resolution);
+                mesh.addIndex(currLayerIdx + i);
+                
+                mesh.addIndex(currLayerIdx + i);
+                mesh.addIndex(prevLayerIdx + (i + 1) % resolution);
+                mesh.addIndex(currLayerIdx + (i + 1) % resolution);
+            }
         }
         return newBranch;
     }
