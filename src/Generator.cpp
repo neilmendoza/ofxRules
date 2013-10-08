@@ -62,6 +62,8 @@ namespace itg
     {
         list<Branch::Ptr> newBranches;
         
+        // step over the system like this rather than recursively to save on memory and
+        // so that we can have easy access to what's going on with the branches
         for (list<Branch::Ptr>::iterator it = branches.begin(); it != branches.end(); ++it)
         {
             if ((*it)->getDepth() < maxDepth && !(*it)->getNextRuleName().empty())
