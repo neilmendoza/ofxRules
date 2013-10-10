@@ -37,6 +37,15 @@ namespace itg
     {
     }
     
+    ofMatrix4x4 Action::inverseTranspose(const ofMatrix4x4& transform) const
+    {
+        ofMatrix4x4 normalMatrix = ofMatrix4x4::getTransposedOf(const_cast<ofMatrix4x4&>(transform).getInverse());
+        return ofMatrix4x4(normalMatrix(0, 0), normalMatrix(0, 1), normalMatrix(0, 2), 0.f,
+                           normalMatrix(1, 0), normalMatrix(1, 1), normalMatrix(1, 2), 0.f,
+                           normalMatrix(2, 0), normalMatrix(2, 1), normalMatrix(2, 2), 0.f,
+                           0.f,                0.f,                0.f,                1.f);
+    }
+    
     void Action::load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum)
     {
         ofLogError() << "Undefined action load function called";

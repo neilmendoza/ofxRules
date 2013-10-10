@@ -45,8 +45,6 @@ namespace itg
         
         Branch(const string& ruleName, unsigned depth = 0, const ofMatrix4x4& transform = ofMatrix4x4(), const ofMatrix4x4& prevTransform = ofMatrix4x4());
         
-        void step(ofMesh& mesh);
-        
         string getNextRuleName() const { return nextRuleName; }
         
         ofMatrix4x4 getTransform() const { return transform; }

@@ -44,6 +44,9 @@ namespace itg
     public:
         typedef shared_ptr<Action> Ptr;
         
+        // get the normal matrix
+        ofMatrix4x4 inverseTranspose(const ofMatrix4x4& transform) const;
+        
         Action(const string& nextRuleName = "");
         virtual ~Action() {}
         

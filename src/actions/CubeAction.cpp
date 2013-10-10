@@ -75,7 +75,7 @@ namespace itg
     Branch::Ptr CubeAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
-        ofQuaternion quat = newBranch->getTransform().getRotate();
+        ofMatrix4x4 normalMatrix = inverseTranspose(newBranch->getTransform());
         for (unsigned i = 0; i < NUM_INDICES; ++i)
         {
             mesh.addIndex(INDICES[i] + mesh.getNumVertices());
@@ -83,7 +83,7 @@ namespace itg
         for (unsigned i = 0; i < vertices.size(); ++i)
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
-            mesh.addNormal(NORMALS[i] * quat);
+            mesh.addNormal(NORMALS[i] * normalMatrix);
         }
         return newBranch;
     }
