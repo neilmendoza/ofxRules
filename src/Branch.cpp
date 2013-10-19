@@ -33,8 +33,8 @@
 
 namespace itg
 {
-    Branch::Branch(const string& nextRuleName, unsigned depth, const ofMatrix4x4& transform, const ofMatrix4x4& prevTransform) :
-        nextRuleName(nextRuleName), transform(transform), prevTransform(prevTransform), depth(depth)
+    Branch::Branch(const string& nextRuleName, unsigned depth, const ofMatrix4x4& transform, const ofMatrix4x4& prevTransform, unsigned vertexIndex) :
+        nextRuleName(nextRuleName), transform(transform), prevTransform(prevTransform), depth(depth), vertexIndex(vertexIndex)
     {
     }
 }

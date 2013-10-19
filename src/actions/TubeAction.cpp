@@ -54,10 +54,10 @@ namespace itg
             mesh.addVertex(vertices[i] * newBranch->getTransform());
             mesh.addNormal(normals[i] * normalMatrix);
         }
-        // if not first slice, add triangle
-        if (mesh.getNumVertices() != resolution)
+        // if not first slice, add triangles
+        if (branch->getVertexIndex() != 0)
         {
-            unsigned prevLayerIdx = mesh.getNumVertices() - 2 * resolution;
+            unsigned prevLayerIdx = branch->getVertexIndex() - resolution;
             unsigned currLayerIdx = mesh.getNumVertices() - resolution;
             for (unsigned i = 0; i < resolution; ++i)
             {
@@ -70,6 +70,7 @@ namespace itg
                 mesh.addIndex(currLayerIdx + (i + 1) % resolution);
             }
         }
+        newBranch->setVertexIndex(mesh.getNumVertices());
         return newBranch;
     }
     

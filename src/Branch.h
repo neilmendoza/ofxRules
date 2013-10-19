@@ -43,7 +43,7 @@ namespace itg
     public:
         typedef shared_ptr<Branch> Ptr;
         
-        Branch(const string& ruleName, unsigned depth = 0, const ofMatrix4x4& transform = ofMatrix4x4(), const ofMatrix4x4& prevTransform = ofMatrix4x4());
+        Branch(const string& ruleName, unsigned depth = 0, const ofMatrix4x4& transform = ofMatrix4x4(), const ofMatrix4x4& prevTransform = ofMatrix4x4(), unsigned vertexIndex = 0);
         
         string getNextRuleName() const { return nextRuleName; }
         
@@ -54,9 +54,12 @@ namespace itg
         void setDepth(unsigned depth) { this->depth = depth; }
         unsigned getDepth() { return depth; }
         
+        void setVertexIndex(unsigned vertexIndex) { this->vertexIndex = vertexIndex; }
+        unsigned getVertexIndex() const { return vertexIndex; }
         
     private:
         unsigned depth;
+        unsigned vertexIndex;
         string nextRuleName;
         ofMatrix4x4 transform;
         ofMatrix4x4 prevTransform;
