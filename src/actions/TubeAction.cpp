@@ -48,11 +48,11 @@ namespace itg
     Branch::Ptr TubeAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
-        ofQuaternion quat = newBranch->getTransform().getRotate();
+        ofMatrix4x4 normalMatrix = inverseTranspose(newBranch->getTransform());
         for (unsigned i = 0; i < resolution; ++i)
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
-            mesh.addNormal(normals[i] * quat);
+            mesh.addNormal(normals[i] * normalMatrix);
         }
         // if not first slice, add triangle
         if (mesh.getNumVertices() != resolution)

@@ -40,9 +40,6 @@ namespace itg
     
     Branch::Ptr PointAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
-        /*ofQuaternion quat = branch->getTransform().getRotate();
-        ofVec3f euler = quat.getEuler();
-        cout << euler << endl;*/
         mesh.addVertex(ofVec3f() * branch->getTransform());
         return TransformAction::step(branch, mesh);
     }
