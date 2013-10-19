@@ -41,7 +41,7 @@ namespace itg
             float theta = TWO_PI * (i % resolution) / (float)resolution;
             vertices.push_back(ofVec3f(radius * sin(theta), 0, radius * cos(theta)));
             normals.push_back(normal);
-            normal.rotate(TWO_PI / resolution, ofVec3f(0, 1, 0));
+            normal.rotate(360.f / resolution, ofVec3f(0, 1, 0));
         }
     }
     
