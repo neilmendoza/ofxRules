@@ -53,6 +53,7 @@ namespace itg
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
             mesh.addNormal(normals[i] * normalMatrix);
+            mesh.addColor(colour);
         }
         // if not first slice, add triangles
         if (branch->getVertexIndex() != 0)
@@ -79,5 +80,6 @@ namespace itg
         TransformAction::load(xml, tagName, tagIdx);
         setResolution(xml.getAttribute(tagName, "resolution", 20, tagIdx));
         setRadius(xml.getAttribute(tagName, "radius", 5, tagIdx));
+        colour = Action::parseColour(xml.getAttribute(tagName, "colour", "", tagIdx));
     }
 }

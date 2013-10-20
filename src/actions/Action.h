@@ -57,6 +57,9 @@ namespace itg
         
         virtual void load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum);
         virtual void save(ofxXmlSettings& xml);
+    
+    protected:
+        static ofFloatColor parseColour(const string& colourString);
         
     private:
         string nextRuleName;

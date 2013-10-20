@@ -59,5 +59,6 @@ namespace itg
         
         vector<ofVec3f> vertices;
         vector<ofVec3f> normals;
+        ofFloatColor colour;
     };
 }

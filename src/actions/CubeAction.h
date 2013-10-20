@@ -54,6 +54,7 @@ namespace itg
         void setSize(float size);
         
     private:
+        ofFloatColor colour;
         vector<ofVec3f> vertices;
     };
 }

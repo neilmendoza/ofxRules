@@ -84,6 +84,7 @@ namespace itg
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
             mesh.addNormal(NORMALS[i] * normalMatrix);
+            mesh.addColor(colour);
         }
         return newBranch;
     }
@@ -92,5 +93,6 @@ namespace itg
     {
         TransformAction::load(xml, tagName, tagIdx);
         setSize(xml.getAttribute(tagName, "size", 0.1, tagIdx));
+        colour = Action::parseColour(xml.getAttribute(tagName, "colour", "", tagIdx));
     }
 }
