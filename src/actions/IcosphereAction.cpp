@@ -35,22 +35,21 @@ namespace itg
 {
     void IcosphereAction::setParameters(float radius, unsigned iterations)
     {
-        mesh = Action::icosphere(radius, iterations);
+        icoMesh = Action::icosphere(radius, iterations);
     }
     
     Branch::Ptr IcosphereAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
         ofMatrix4x4 normalMatrix = inverseTranspose(newBranch->getTransform());
-        for (unsigned i = 0; i < mesh.getNumIndices(); ++i)
+        for (unsigned i = 0; i < icoMesh.getNumIndices(); ++i)
         {
-            mesh.addIndex(mesh.getIndex(i) + mesh.getNumVertices());
+            mesh.addIndex(icoMesh.getIndex(i) + mesh.getNumVertices());
         }
-        for (unsigned i = 0; i < mesh.getNumVertices(); ++i)
+        for (unsigned i = 0; i < icoMesh.getNumVertices(); ++i)
         {
-            mesh.addVertex(mesh.getVertex(i) * newBranch->getTransform());
-            mesh.addNormal(mesh.getNormal(i) * normalMatrix);
-            mesh.addColor(colour);
+            mesh.addVertex(icoMesh.getVertex(i) * newBranch->getTransform());
+            mesh.addNormal(icoMesh.getNormal(i) * normalMatrix);
         }
         return newBranch;
     }
@@ -60,6 +59,6 @@ namespace itg
         TransformAction::load(xml, tagName, tagIdx);
         float radius = xml.getAttribute(tagName, "radius", 0.1, tagIdx);
         unsigned iterations = xml.getAttribute(tagName, "iterations", 2, tagIdx);
-        colour = Action::parseColour(xml.getAttribute(tagName, "colour", "", tagIdx));
+        setParameters(radius, iterations);
     }
 }

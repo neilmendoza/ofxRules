@@ -49,7 +49,6 @@ namespace itg
         void setParameters(float radius, unsigned iterations);
         
     private:
-        ofFloatColor colour;
-        ofMesh mesh;
+        ofMesh icoMesh;
     };
 }
