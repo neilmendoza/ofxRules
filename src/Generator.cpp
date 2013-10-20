@@ -36,6 +36,7 @@
 #include "PointAction.h"
 #include "CubeAction.h"
 #include "TubeAction.h"
+#include "IcosphereAction.h"
 
 namespace itg
 {
@@ -47,6 +48,8 @@ namespace itg
         registerAction<TransformAction>("transform");
         registerAction<CubeAction>("cube");
         registerAction<TubeAction>("tube");
+        registerAction<IcosphereAction>("ico");
+        registerAction<IcosphereAction>("icosphere");
         
         mesh.setUsage(GL_DYNAMIC_DRAW);
         mesh.setMode(OF_PRIMITIVE_TRIANGLES);
