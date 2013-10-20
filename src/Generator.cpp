@@ -84,6 +84,17 @@ namespace itg
         mesh.draw();
     }
     
+    void Generator::drawNormals(float size)
+    {
+        for (int i = 0; i < mesh.getNumVertices(); ++i)
+        {
+            ofVec3f vertex = mesh.getVertex(i);
+            ofVec3f normal = mesh.getNormal(i);
+            
+            ofLine(vertex, vertex + size * normal);
+        }
+    }
+    
     void Generator::load(const string& fileName)
     {
         ofxXmlSettings xml;
@@ -151,14 +162,21 @@ namespace itg
     {
         Poco::File file = ofFile(watchedFileName).getPocoFile();
         Poco::Timestamp timestamp = file.getLastModified();
-        if (timestamp > watchedLastModified)
+        if (timestamp != watchedLastModified)
         {
-            mesh.clear();
+            clear();
             load(watchedFileName);
-            branches.clear();
             ofNotifyEvent(fileReloaded, branches, this);
             watchedLastModified = timestamp;
         }
+    }
+    
+    void Generator::clear()
+    {
+        mesh.clear();
+        branches.clear();
+        ruleSets.clear();
+        maxDepth = numeric_limits<unsigned>::max();
     }
     
     Rule::Ptr Generator::addRule(const string& ruleName, float weight)

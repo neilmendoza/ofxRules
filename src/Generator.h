@@ -52,6 +52,10 @@ namespace itg
         
         void draw();
         
+        void drawNormals(float size);
+        
+        void clear();
+        
         Rule::Ptr addRule(const string& ruleName, float weight);
         
         Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
