@@ -33,6 +33,8 @@
 
 namespace itg
 {
+    
+    
     void SphereAction::load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx)
     {
         TransformAction::load(xml, tagName, tagIdx);

@@ -60,6 +60,9 @@ namespace itg
     
     protected:
         static ofFloatColor parseColour(const string& colourString);
+        // these functions are part of ofMesh is 0.8
+        static ofMesh icosahedron(float radius);
+        static ofMesh icosphere(float radius, int iterations);
         
     private:
         string nextRuleName;
