@@ -44,9 +44,6 @@ namespace itg
     public:
         typedef shared_ptr<Action> Ptr;
         
-        // get the normal matrix
-        ofMatrix4x4 inverseTranspose(const ofMatrix4x4& transform) const;
-        
         Action(const string& nextRuleName = "");
         virtual ~Action() {}
         
@@ -59,6 +56,8 @@ namespace itg
         virtual void save(ofxXmlSettings& xml);
     
     protected:
+        // get the normal matrix
+        static ofMatrix4x4 inverseTranspose(const ofMatrix4x4& transform);
         static ofFloatColor parseColour(const string& colourString);
         // these functions are part of ofMesh is 0.8
         static ofMesh icosahedron(float radius);
