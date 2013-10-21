@@ -50,6 +50,7 @@ namespace itg
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
         // if first slice work out correct orientation of tube and add that
         // to the current transform
+        /*
         if (branch->getActionName() != getName())
         {
             ofVec3f direction = ((ofVec3f() * newBranch->getTransform()) - ofVec3f()).normalized();
@@ -58,9 +59,9 @@ namespace itg
             //ofQuaternion rot(angle, axis);
             ofMatrix4x4 r;
             r.makeRotationMatrix(ofVec3f(0, 1, 0), direction);
-            newBranch->getTransformRef().preMult(r);
+            newBranch->getTransformRef().postMult(r);
             //cout << angle << endl;
-        }
+        }*/
         ofMatrix4x4 normalMatrix = inverseTranspose(newBranch->getTransform());
         for (unsigned i = 0; i < resolution; ++i)
         {
