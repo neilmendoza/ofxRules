@@ -56,7 +56,7 @@ namespace itg
             mesh.addColor(colour);
         }
         // if not first slice, add triangles
-        if (branch->getVertexIndex() != 0)
+        if (branch->getActionName() == getName())
         {
             unsigned prevLayerIdx = branch->getVertexIndex() - resolution;
             unsigned currLayerIdx = mesh.getNumVertices() - resolution;

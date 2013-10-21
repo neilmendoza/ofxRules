@@ -47,13 +47,16 @@ namespace itg
         ofLogError() << "Undefined action save function called";
     }
     
+    //////////////////////////////////////////////////////////////////
     // static functions
+    //////////////////////////////////////////////////////////////////
     ofFloatColor Action::parseColour(const string& colourString)
     {
+        if (colourString.empty()) return ofFloatColor(1.f, 1.f, 1.f);
+        
         vector<string> split = ofSplitString(colourString, " ");
         ofFloatColor colour;
-        if (split.empty()) return ofFloatColor(1.f, 1.f, 1.f);
-        else if (split.size() != 3) ofLogError() << "Colour format error";
+        if (split.size() != 3) ofLogError() << "Colour format error";
         else
         {
             if (colourString.find('.') == string::npos)

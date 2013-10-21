@@ -43,7 +43,6 @@ namespace itg
     {
         setNextRuleName(xml.getAttribute(tagName, "next", "", tagIdx));
         parseTransforms(xml.getAttribute(tagName, "transforms", "", tagIdx));
-        //parseParams(xml.getAttribute(tagName, "transforms", "", tagIdx));
     }
     
     /*void TransformAction::save(ofxXmlSettings& xml)
@@ -53,7 +52,7 @@ namespace itg
     
     Branch::Ptr TransformAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
-        return Branch::Ptr(new Branch(getNextRuleName(), branch->getDepth() + 1, transform * branch->getTransform(), branch->getTransform(), branch->getVertexIndex()));
+        return Branch::Ptr(new Branch(getNextRuleName(), branch->getDepth() + 1, transform * branch->getTransform(), branch->getTransform(), getName()));
     }
     
     void TransformAction::translate(const ofVec3f& translation)

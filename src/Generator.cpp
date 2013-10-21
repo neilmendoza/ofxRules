@@ -130,6 +130,7 @@ namespace itg
                     for (unsigned k = 0; k < xml.getNumTags(it->first); ++k)
                     {
                         Action::Ptr action = (this->*it->second)();
+                        action->setName(it->first);
                         action->load(xml, it->first, k);
                         rule->addAction(action);
                     }

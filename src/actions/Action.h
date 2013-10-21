@@ -54,6 +54,9 @@ namespace itg
         
         virtual void load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum);
         virtual void save(ofxXmlSettings& xml);
+        
+        string getName() const { return name; }
+        void setName(const string& name) { this->name = name; }
     
     protected:
         // get the normal matrix
@@ -65,5 +68,6 @@ namespace itg
         
     private:
         string nextRuleName;
+        string name;
     };
 }
