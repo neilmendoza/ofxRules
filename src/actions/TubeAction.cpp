@@ -48,6 +48,19 @@ namespace itg
     Branch::Ptr TubeAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
+        // if first slice work out correct orientation of tube and add that
+        // to the current transform
+        if (branch->getActionName() != getName())
+        {
+            ofVec3f direction = ((ofVec3f() * newBranch->getTransform()) - ofVec3f()).normalized();
+            float angle = direction.angle(ofVec3f(0, 1, 0));
+            ofVec3f axis = direction.perpendiculared(ofVec3f(0, 1, 0));
+            //ofQuaternion rot(angle, axis);
+            ofMatrix4x4 r;
+            r.makeRotationMatrix(ofVec3f(0, 1, 0), direction);
+            newBranch->getTransformRef().preMult(r);
+            //cout << angle << endl;
+        }
         ofMatrix4x4 normalMatrix = inverseTranspose(newBranch->getTransform());
         for (unsigned i = 0; i < resolution; ++i)
         {
@@ -55,7 +68,7 @@ namespace itg
             mesh.addNormal(normals[i] * normalMatrix);
             mesh.addColor(colour);
         }
-        // if not first slice, add triangles
+        // if not first slice, add vertices and triangles as normal
         if (branch->getActionName() == getName())
         {
             unsigned prevLayerIdx = branch->getVertexIndex() - resolution;

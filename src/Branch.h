@@ -48,6 +48,7 @@ namespace itg
         string getNextRuleName() const { return nextRuleName; }
         
         ofMatrix4x4 getTransform() const { return transform; }
+        ofMatrix4x4& getTransformRef() { return transform; }
         
         ofMatrix4x4 getPrevTransform() const { return prevTransform; }
         
