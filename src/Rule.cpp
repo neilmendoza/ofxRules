@@ -42,11 +42,14 @@ namespace itg
         vector<Branch::Ptr> branches;
         for (unsigned i = 0; i < actions.size(); ++i)
         {
-            Branch::Ptr newBranch = actions[i]->step(branch, mesh);
+            Branch::Ptr newBranch = Branch::Ptr();
+            for (unsigned j = 0; j < actions[i]->getRepeat(); ++j)
+            {
+                if (newBranch) newBranch = actions[i]->step(newBranch, mesh);
+                else newBranch = actions[i]->step(branch, mesh);
+            }
             if (newBranch) branches.push_back(newBranch);
         }
         return branches;
     }
-    
-
 }

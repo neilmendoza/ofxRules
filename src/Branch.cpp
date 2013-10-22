@@ -34,9 +34,9 @@
 namespace itg
 {
     Branch::Branch(const string& nextRuleName, unsigned depth, const ofMatrix4x4& transform,
-                   const ofMatrix4x4& prevTransform, const string& actionName, unsigned repeated) :
+                   const ofMatrix4x4& prevTransform, const string& actionName) :
         nextRuleName(nextRuleName), transform(transform), prevTransform(prevTransform),
-        depth(depth), actionName(actionName), repeated(repeated)
+        depth(depth), actionName(actionName)
     {
     }
 }
