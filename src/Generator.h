@@ -42,6 +42,8 @@ namespace itg
     class Generator
     {
     public:
+        static const string DEFAULT_START_RULE;
+        
         typedef Action::Ptr (Generator::*ActionCreator)();
         typedef map<string, ActionCreator>::iterator CreatorIt;
         
@@ -56,11 +58,15 @@ namespace itg
         
         void clear();
         
+        void start();
+        
         Rule::Ptr addRule(const string& ruleName, float weight);
         
         Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
         
         void setMaxDepth(unsigned maxDepth) { this->maxDepth = maxDepth; }
+        
+        void setStartRule(const string& startRule) { this->startRule = startRule; }
         
         void load(const string& fileName);
         
@@ -87,6 +93,7 @@ namespace itg
         ofVboMesh& getMeshRef() { return mesh; }
         
     private:
+        string startRule;
         void onUpdate(ofEventArgs& args);
         map<string, RuleSet::Ptr> ruleSets;
         list<Branch::Ptr> branches;

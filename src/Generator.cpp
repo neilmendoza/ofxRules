@@ -40,6 +40,8 @@
 
 namespace itg
 {
+    const string Generator::DEFAULT_START_RULE = "start";
+    
     Generator::Generator() :
         maxDepth(numeric_limits<unsigned>::max())
     {
@@ -55,6 +57,11 @@ namespace itg
         mesh.setMode(OF_PRIMITIVE_TRIANGLES);
     }
     
+    void Generator::start()
+    {
+        if (startRule.empty()) addBranch(DEFAULT_START_RULE);
+        else addBranch(startRule);
+    }
     
     void Generator::step()
     {
@@ -103,6 +110,7 @@ namespace itg
         ofxXmlSettings xml;
         xml.loadFile(fileName);
         setMaxDepth(xml.getAttribute("rules", "maxDepth", (int)numeric_limits<unsigned>::max()));
+        setStartRule(xml.getAttribute("rules", "startRule", ""));
         string primitive = xml.getAttribute("rules", "primitive", "");
         if (!primitive.empty())
         {
