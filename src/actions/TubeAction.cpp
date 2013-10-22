@@ -35,12 +35,15 @@ namespace itg
 {
     void TubeAction::setRadius(float radius)
     {
+        ofVec3f direction = ((ofVec3f() * getTransform()) - ofVec3f()).normalized();
+        ofMatrix4x4 r;
+        r.makeRotationMatrix(ofVec3f(0, 1, 0), direction);
         ofVec3f normal = ofVec3f(0, 0, 1);
         for (unsigned i = 0; i < resolution; ++i)
         {
             float theta = TWO_PI * (i % resolution) / (float)resolution;
-            vertices.push_back(ofVec3f(radius * sin(theta), 0, radius * cos(theta)));
-            normals.push_back(normal);
+            vertices.push_back(ofVec3f(radius * sin(theta), 0, radius * cos(theta)) * r);
+            normals.push_back(normal * r);
             normal.rotate(360.f / resolution, ofVec3f(0, 1, 0));
         }
     }
@@ -48,20 +51,6 @@ namespace itg
     Branch::Ptr TubeAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
         Branch::Ptr newBranch = TransformAction::step(branch, mesh);
-        // if first slice work out correct orientation of tube and add that
-        // to the current transform
-        /*
-        if (branch->getActionName() != getName())
-        {
-            ofVec3f direction = ((ofVec3f() * newBranch->getTransform()) - ofVec3f()).normalized();
-            float angle = direction.angle(ofVec3f(0, 1, 0));
-            ofVec3f axis = direction.perpendiculared(ofVec3f(0, 1, 0));
-            //ofQuaternion rot(angle, axis);
-            ofMatrix4x4 r;
-            r.makeRotationMatrix(ofVec3f(0, 1, 0), direction);
-            newBranch->getTransformRef().postMult(r);
-            //cout << angle << endl;
-        }*/
         ofMatrix4x4 normalMatrix = inverseTranspose(newBranch->getTransform());
         for (unsigned i = 0; i < resolution; ++i)
         {

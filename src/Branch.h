@@ -48,18 +48,17 @@ namespace itg
         string getNextRuleName() const { return nextRuleName; }
         
         ofMatrix4x4 getTransform() const { return transform; }
-        ofMatrix4x4& getTransformRef() { return transform; }
         
         ofMatrix4x4 getPrevTransform() const { return prevTransform; }
+        
+        //void setActionName(const string& actionName) { this->actionName = actionName; }
+        string getActionName() const { return actionName; }
         
         void setDepth(unsigned depth) { this->depth = depth; }
         unsigned getDepth() { return depth; }
         
         void setVertexIndex(unsigned vertexIndex) { this->vertexIndex = vertexIndex; }
         unsigned getVertexIndex() const { return vertexIndex; }
-        
-        void setActionName(const string& actionName) { this->actionName = actionName; }
-        string getActionName() const { return actionName; }
         
     private:
         string actionName;
