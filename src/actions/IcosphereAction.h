@@ -50,5 +50,6 @@ namespace itg
         
     private:
         ofMesh icoMesh;
+        ofFloatColor colour;
     };
 }

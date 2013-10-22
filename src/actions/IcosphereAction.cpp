@@ -50,6 +50,7 @@ namespace itg
         {
             mesh.addVertex(icoMesh.getVertex(i) * newBranch->getTransform());
             mesh.addNormal(icoMesh.getNormal(i) * normalMatrix);
+            mesh.addColor(colour);
         }
         return newBranch;
     }
@@ -60,5 +61,6 @@ namespace itg
         float radius = xml.getAttribute(tagName, "radius", 0.1, tagIdx);
         unsigned iterations = xml.getAttribute(tagName, "iterations", 2, tagIdx);
         setParameters(radius, iterations);
+        colour = Action::parseColour(xml.getAttribute(tagName, "colour", "", tagIdx));
     }
 }
