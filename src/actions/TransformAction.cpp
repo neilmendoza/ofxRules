@@ -52,7 +52,6 @@ namespace itg
     
     Branch::Ptr TransformAction::step(Branch::Ptr branch, ofMesh& mesh)
     {
-        //if (branch->getRepeated() < getRepeat())
         // really this stuff should go in Action
         return Branch::Ptr(new Branch(getNextRuleName(), branch->getDepth() + 1, transform * branch->getTransform(), branch->getTransform(), getName()));
     }
