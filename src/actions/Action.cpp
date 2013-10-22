@@ -37,9 +37,10 @@ namespace itg
     {
     }
     
-    void Action::load(ofxXmlSettings& xml, const string& tagName, unsigned tagNum)
+    void Action::load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx)
     {
-        ofLogError() << "Undefined action load function called";
+        setNextRuleName(xml.getAttribute(tagName, "next", "", tagIdx));
+        setRepeat(xml.getAttribute(tagName, "repeat", 0, tagIdx));
     }
     
     void Action::save(ofxXmlSettings& xml)

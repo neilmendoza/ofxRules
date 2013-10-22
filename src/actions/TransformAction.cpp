@@ -41,7 +41,7 @@ namespace itg
     
     void TransformAction::load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx)
     {
-        setNextRuleName(xml.getAttribute(tagName, "next", "", tagIdx));
+        Action::load(xml, tagName, tagIdx);
         parseTransforms(xml.getAttribute(tagName, "transforms", "", tagIdx));
     }
     
