@@ -139,6 +139,7 @@ namespace itg
                     {
                         Action::Ptr action = (this->*it->second)();
                         action->setName(it->first);
+                        action->setRuleName(name);
                         action->load(xml, it->first, k);
                         rule->addAction(action);
                     }
@@ -200,6 +201,11 @@ namespace itg
     
     Branch::Ptr Generator::addBranch(const string& ruleName, const ofMatrix4x4& transform)
     {
+        if (ruleSets.find(ruleName) == ruleSets.end())
+        {
+            ofLogError() << "No ruleSet with name " << ruleName;
+            return Branch::Ptr();
+        }
         Branch::Ptr branch = Branch::Ptr(new Branch(ruleName, 0, transform));
         branches.push_back(branch);
         return branch;

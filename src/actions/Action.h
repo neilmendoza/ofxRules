@@ -52,6 +52,9 @@ namespace itg
         void setNextRuleName(const string& nextRuleName) { this->nextRuleName = nextRuleName; }
         string getNextRuleName() const { return nextRuleName; }
         
+        void setRuleName(const string& ruleName) { this->ruleName = ruleName; }
+        string getRuleName() const { return ruleName; }
+        
         void setRepeat(unsigned repeat) { this->repeat = repeat; }
         unsigned getRepeat() const { return repeat; }
         
@@ -70,8 +73,9 @@ namespace itg
         static ofMesh icosphere(float radius, int iterations);
         
     private:
-        string nextRuleName;
         string name;
+        string ruleName;
+        string nextRuleName;
         unsigned repeat;
     };
 }

@@ -51,6 +51,8 @@ namespace itg
         
         ofMatrix4x4 getPrevTransform() const { return prevTransform; }
         
+        unsigned getRepeated() const { return repeated; }
+        
         //void setActionName(const string& actionName) { this->actionName = actionName; }
         string getActionName() const { return actionName; }
         
@@ -61,6 +63,7 @@ namespace itg
         unsigned getVertexIndex() const { return vertexIndex; }
         
     private:
+        unsigned repeated;
         string actionName;
         unsigned depth;
         unsigned vertexIndex;

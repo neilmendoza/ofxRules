@@ -40,7 +40,7 @@ namespace itg
     void Action::load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx)
     {
         setNextRuleName(xml.getAttribute(tagName, "next", "", tagIdx));
-        setRepeat(xml.getAttribute(tagName, "repeat", 0, tagIdx));
+        setRepeat(xml.getAttribute(tagName, "repeat", 1, tagIdx));
     }
     
     void Action::save(ofxXmlSettings& xml)
