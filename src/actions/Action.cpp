@@ -57,8 +57,18 @@ namespace itg
         
         vector<string> split = ofSplitString(colourString, " ");
         ofFloatColor colour;
-        if (split.size() != 3) ofLogError() << "Colour format error";
-        else
+        if (split.size() == 1)
+        {
+            if (colourString.find('.') == string::npos)
+            {
+                colour.set(atoi(split[0].c_str()) / 255.f, atoi(split[0].c_str()) / 255.f, atoi(split[0].c_str()) / 255.f);
+            }
+            else
+            {
+                colour.set(atof(split[0].c_str()), atof(split[0].c_str()), atof(split[0].c_str()));
+            }
+        }
+        else if (split.size() == 3)
         {
             if (colourString.find('.') == string::npos)
             {
@@ -69,6 +79,7 @@ namespace itg
                 colour.set(atof(split[0].c_str()), atof(split[1].c_str()), atof(split[2].c_str()));
             }
         }
+        else ofLogError() << "Colour format error";
         return colour;
     }
     

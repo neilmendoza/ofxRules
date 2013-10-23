@@ -78,11 +78,16 @@ namespace itg
         {
             if ((*it)->getDepth() < maxDepth && !(*it)->getNextRuleName().empty())
             {
-                RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
-                
-                vector<Branch::Ptr> children = ruleSet->randomRule()->step(*it, mesh);
-                
-                newBranches.insert(newBranches.end(), children.begin(), children.end());
+                auto ruleSet = ruleSets.find((*it)->getNextRuleName());
+                if (ruleSet != ruleSets.end())
+                {
+                    //RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
+                    
+                    vector<Branch::Ptr> children = ruleSet->second->randomRule()->step(*it, mesh);
+                    
+                    newBranches.insert(newBranches.end(), children.begin(), children.end());
+                }
+                else ofLogError() << "No ruleSet with name " << (*it)->getNextRuleName();
             }
         }
         
@@ -91,7 +96,19 @@ namespace itg
     
     void Generator::draw()
     {
+        ofPushStyle();
+        if (!enableColour) mesh.disableColors();
         mesh.draw();
+        if (!enableColour) mesh.enableColors();
+        if (enableWireframe)
+        {
+            ofSetLineWidth(1.5);
+            mesh.disableColors();
+            ofSetColor(255);
+        }
+        mesh.drawWireframe();
+        if (enableWireframe) mesh.enableColors();
+        ofPopStyle();
     }
     
     void Generator::drawNormals(float size)
@@ -109,6 +126,15 @@ namespace itg
     {
         ofxXmlSettings xml;
         xml.loadFile(fileName);
+        
+        string enableColourStr = xml.getAttribute("rules", "enableColour", "1");
+        if (enableColourStr == "1" || enableColourStr == "true") enableColour = true;
+        else enableColour = false;
+        
+        string enableWireframeStr = xml.getAttribute("rules", "enableWireframe", "0");
+        if (enableWireframeStr == "1" || enableWireframeStr == "true") enableWireframe = true;
+        else enableWireframe = false;
+        
         setMaxDepth(xml.getAttribute("rules", "maxDepth", (int)numeric_limits<unsigned>::max()));
         setStartRule(xml.getAttribute("rules", "startRule", ""));
         string primitive = xml.getAttribute("rules", "primitive", "");
@@ -203,7 +229,7 @@ namespace itg
     {
         if (ruleSets.find(ruleName) == ruleSets.end())
         {
-            ofLogError() << "No ruleSet with name " << ruleName;
+            ofLogError() << "No ruleSet with name " << ruleName << "add ruleSet name start or add attribute startRule to outermost tag";
             return Branch::Ptr();
         }
         Branch::Ptr branch = Branch::Ptr(new Branch(ruleName, 0, transform));
