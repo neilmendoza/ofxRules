@@ -51,6 +51,8 @@ namespace itg
     
         void load(ofxXmlSettings& xml, const string& tagName, unsigned tagIdx);
         
+        void setDimensions(float w, float h, float d);
+        
         void setSize(float size);
         
     private:
