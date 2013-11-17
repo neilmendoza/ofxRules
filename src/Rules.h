@@ -1,5 +1,5 @@
 /*
- *  Generator.h
+ *  Rules.h
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -39,15 +39,15 @@ namespace itg
 {
     typedef list<Branch::Ptr>::iterator BranchIt;
     
-    class Generator
+    class Rules
     {
     public:
         static const string DEFAULT_START_RULE;
         
-        typedef Action::Ptr (Generator::*ActionCreator)();
+        typedef Action::Ptr (Rules::*ActionCreator)();
         typedef map<string, ActionCreator>::iterator CreatorIt;
         
-        Generator();
+        Rules();
         
         void step();
         void step(ofMesh& mesh);
@@ -85,7 +85,7 @@ namespace itg
         template<class T>
         void registerAction(const string& tagName)
         {
-            creators[tagName] = &Generator::createAction<T>;
+            creators[tagName] = &Rules::createAction<T>;
         }
         
         ofEvent<list<Branch::Ptr> > fileReloaded;

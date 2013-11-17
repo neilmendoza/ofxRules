@@ -1,5 +1,5 @@
 /*
- *  ofxGenerator.h
+ *  ofxRules.h
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -31,8 +31,8 @@
  */
 #pragma once
 
-#include "Generator.h"
+#include "Rules.h"
 
 using namespace itg;
 
-typedef Generator ofxGenerator;
+typedef Rules ofxRules;

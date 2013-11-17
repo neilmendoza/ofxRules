@@ -1,5 +1,5 @@
 /*
- *  Generator.cpp
+ *  Rules.cpp
  *
  *  Copyright (c) 2013, Neil Mendoza, http://www.neilmendoza.com
  *  All rights reserved. 
@@ -29,7 +29,7 @@
  *  POSSIBILITY OF SUCH DAMAGE. 
  *
  */
-#include "Generator.h"
+#include "Rules.h"
 #include "ofxXmlSettings.h"
 #include "LineAction.h"
 #include "TransformAction.h"
@@ -41,9 +41,9 @@
 
 namespace itg
 {
-    const string Generator::DEFAULT_START_RULE = "start";
+    const string Rules::DEFAULT_START_RULE = "start";
     
-    Generator::Generator() :
+    Rules::Rules() :
         maxDepth(numeric_limits<unsigned>::max())
     {
         registerAction<LineAction>("line");
@@ -59,18 +59,18 @@ namespace itg
         mesh.setMode(OF_PRIMITIVE_TRIANGLES);
     }
     
-    void Generator::start()
+    void Rules::start()
     {
         if (startRule.empty()) addBranch(DEFAULT_START_RULE);
         else addBranch(startRule);
     }
     
-    void Generator::step()
+    void Rules::step()
     {
         step(mesh);
     }
     
-    void Generator::step(ofMesh& mesh)
+    void Rules::step(ofMesh& mesh)
     {
         list<Branch::Ptr> newBranches;
         
@@ -96,7 +96,7 @@ namespace itg
         branches = newBranches;
     }
     
-    void Generator::draw()
+    void Rules::draw()
     {
         ofPushStyle();
         if (!enableColour) mesh.disableColors();
@@ -113,7 +113,7 @@ namespace itg
         ofPopStyle();
     }
     
-    void Generator::drawNormals(float size)
+    void Rules::drawNormals(float size)
     {
         for (int i = 0; i < mesh.getNumVertices(); ++i)
         {
@@ -124,7 +124,7 @@ namespace itg
         }
     }
     
-    void Generator::load(const string& fileName)
+    void Rules::load(const string& fileName)
     {
         ofxXmlSettings xml;
         xml.loadFile(fileName);
@@ -178,7 +178,7 @@ namespace itg
         }
     }
 
-    void Generator::watchFile(const string& watchedFileName, bool autoCheck, float checkPeriod)
+    void Rules::watchFile(const string& watchedFileName, bool autoCheck, float checkPeriod)
     {
         this->watchedFileName = watchedFileName;
         watchedLastModified = Poco::Timestamp(0);
@@ -186,11 +186,11 @@ namespace itg
         {
             lastChecked = 0.f;
             this->checkPeriod = checkPeriod;
-            ofAddListener(ofEvents().update, this, &Generator::onUpdate);
+            ofAddListener(ofEvents().update, this, &Rules::onUpdate);
         }
     }
 
-    void Generator::onUpdate(ofEventArgs& args)
+    void Rules::onUpdate(ofEventArgs& args)
     {
         if (ofGetElapsedTimef() - lastChecked > checkPeriod)
         {
@@ -199,7 +199,7 @@ namespace itg
         }
     }
     
-    void Generator::checkWatchedFile()
+    void Rules::checkWatchedFile()
     {
         Poco::File file = ofFile(watchedFileName).getPocoFile();
         Poco::Timestamp timestamp = file.getLastModified();
@@ -212,7 +212,7 @@ namespace itg
         }
     }
     
-    void Generator::clear()
+    void Rules::clear()
     {
         mesh.clear();
         branches.clear();
@@ -220,14 +220,14 @@ namespace itg
         maxDepth = numeric_limits<unsigned>::max();
     }
     
-    Rule::Ptr Generator::addRule(const string& ruleName, float weight)
+    Rule::Ptr Rules::addRule(const string& ruleName, float weight)
     {
         if (!ruleSets[ruleName]) ruleSets[ruleName] = RuleSet::Ptr(new RuleSet(ruleName));
         ruleSets[ruleName]->addRule(Rule::Ptr(new Rule(weight)));
         return ruleSets[ruleName]->back();
     }
     
-    Branch::Ptr Generator::addBranch(const string& ruleName, const ofMatrix4x4& transform)
+    Branch::Ptr Rules::addBranch(const string& ruleName, const ofMatrix4x4& transform)
     {
         if (ruleSets.find(ruleName) == ruleSets.end())
         {
