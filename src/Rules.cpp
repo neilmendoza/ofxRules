@@ -99,14 +99,21 @@ namespace itg
     void Rules::draw()
     {
         ofPushStyle();
-        if (!enableColour) mesh.disableColors();
+        // draw mesh
+        if (!enableVertexColours)
+        {
+            mesh.disableColors();
+            ofSetColor(meshColour);
+        }
         mesh.draw();
-        if (!enableColour) mesh.enableColors();
+        if (!enableVertexColours) mesh.enableColors();
+        
+        // draw wireframe
         if (enableWireframe)
         {
             ofSetLineWidth(1.5);
             mesh.disableColors();
-            ofSetColor(255);
+            ofSetColor(wireframeColour);
             mesh.drawWireframe();
             mesh.enableColors();
         }
@@ -129,13 +136,21 @@ namespace itg
         ofxXmlSettings xml;
         xml.loadFile(fileName);
         
-        string enableColourStr = xml.getAttribute("rules", "enableColour", "1");
-        if (enableColourStr == "1" || enableColourStr == "true") enableColour = true;
-        else enableColour = false;
+        string meshColourStr = xml.getAttribute("rules", "meshColour", "");
+        if (meshColourStr.empty()) enableVertexColours = true;
+        else
+        {
+            enableVertexColours = false;
+            meshColour = Action::parseColour(meshColourStr);
+        }
         
-        string enableWireframeStr = xml.getAttribute("rules", "enableWireframe", "0");
-        if (enableWireframeStr == "1" || enableWireframeStr == "true") enableWireframe = true;
-        else enableWireframe = false;
+        string wireframeColourStr = xml.getAttribute("rules", "wireframeColour", "");
+        if (wireframeColourStr.empty()) enableWireframe = false;
+        else
+        {
+            enableWireframe = true;
+            wireframeColour = Action::parseColour(wireframeColourStr);
+        }
         
         setMaxDepth(xml.getAttribute("rules", "maxDepth", (int)numeric_limits<unsigned>::max()));
         setStartRule(xml.getAttribute("rules", "startRule", ""));

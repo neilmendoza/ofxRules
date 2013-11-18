@@ -100,8 +100,12 @@ namespace itg
         unsigned maxDepth;
         map<string, ActionCreator> creators;
         ofVboMesh mesh;
-        bool enableColour;
+        
+        bool enableVertexColours;
+        ofFloatColor meshColour;
+        
         bool enableWireframe;
+        ofFloatColor wireframeColour;
         
         // file watching stuff
         Poco::Timestamp watchedLastModified;

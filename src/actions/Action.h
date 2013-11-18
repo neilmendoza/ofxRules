@@ -63,12 +63,13 @@ namespace itg
         
         string getName() const { return name; }
         void setName(const string& name) { this->name = name; }
-    
+        
+        static ofFloatColor parseColour(const string& colourString);
+        
     protected:
         // get the normal matrix
         static ofMatrix4x4 inverseTranspose(const ofMatrix4x4& transform);
-        static ofFloatColor parseColour(const string& colourString);
-        // these functions are part of ofMesh is 0.8
+        // these functions are part of ofMesh in 0.8
         static ofMesh icosahedron(float radius);
         static ofMesh icosphere(float radius, int iterations);
         
