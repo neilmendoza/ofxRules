@@ -41,9 +41,11 @@ namespace itg
         ofVec3f normal = ofVec3f(0, 0, 1);
         for (unsigned i = 0; i < resolution; ++i)
         {
-            float theta = TWO_PI * (i % resolution) / (float)resolution;
+            float s = (i % resolution) / (float)resolution;
+            float theta = TWO_PI * s;
             vertices.push_back(ofVec3f(radius * sin(theta), 0, radius * cos(theta)) * r);
             normals.push_back(normal * r);
+            texCoords.push_back(ofVec2f(s, 0.f));
             normal.rotate(360.f / resolution, ofVec3f(0, 1, 0));
         }
     }
@@ -56,6 +58,7 @@ namespace itg
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
             mesh.addNormal(normals[i] * normalMatrix);
+            mesh.addTexCoord(texCoords[i] + ofVec2f(0.f, branch->getDepth()));
             mesh.addColor(colour);
         }
         // if not first slice, add vertices and triangles as normal

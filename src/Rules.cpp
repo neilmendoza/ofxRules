@@ -107,9 +107,9 @@ namespace itg
             ofSetLineWidth(1.5);
             mesh.disableColors();
             ofSetColor(255);
+            mesh.drawWireframe();
+            mesh.enableColors();
         }
-        mesh.drawWireframe();
-        if (enableWireframe) mesh.enableColors();
         ofPopStyle();
     }
     
