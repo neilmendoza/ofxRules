@@ -87,20 +87,7 @@ namespace itg
                     
                     vector<Branch::Ptr> children = ruleSet->second->randomRule()->step(*it, mesh);
                     
-                    if (children.size() > 1)
-                    {
-                        for (unsigned i = 0; i < children.size(); ++i)
-                        {
-                            cout << children[i]->getDepth() << " ";
-                        }
-                        cout << endl;
-                    }
-                    
-                    //newBranches.insert(newBranches.end(), children.begin(), children.end());
-                    for (unsigned i = 0; i < children.size(); ++i)
-                    {
-                        newBranches.push_back(children[i]);
-                    }
+                    newBranches.insert(newBranches.end(), children.begin(), children.end());
                 }
                 else ofLogError() << "No ruleSet with name " << (*it)->getNextRuleName();
             }
