@@ -49,8 +49,8 @@ namespace itg
         
         Rules();
         
-        void step();
-        void step(ofMesh& mesh);
+        unsigned step();
+        unsigned step(ofMesh& mesh);
         
         void draw();
         

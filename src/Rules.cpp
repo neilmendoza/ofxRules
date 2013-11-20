@@ -65,14 +65,15 @@ namespace itg
         else addBranch(startRule);
     }
     
-    void Rules::step()
+    unsigned Rules::step()
     {
-        step(mesh);
+        return step(mesh);
     }
     
-    void Rules::step(ofMesh& mesh)
+    unsigned Rules::step(ofMesh& mesh)
     {
         list<Branch::Ptr> newBranches;
+        unsigned activeRuleSets = 0;
         
         // step over the system like this rather than recursively to save on memory and
         // so that we can have easy access to what's going on with the branches
@@ -86,14 +87,14 @@ namespace itg
                     //RuleSet::Ptr ruleSet = ruleSets[(*it)->getNextRuleName()];
                     
                     vector<Branch::Ptr> children = ruleSet->second->randomRule()->step(*it, mesh);
-                    
                     newBranches.insert(newBranches.end(), children.begin(), children.end());
+                    activeRuleSets++;
                 }
                 else ofLogError() << "No ruleSet with name " << (*it)->getNextRuleName();
             }
         }
-        
         branches = newBranches;
+        return activeRuleSets;
     }
     
     void Rules::draw()
