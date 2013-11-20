@@ -64,6 +64,7 @@ namespace itg
         
         Branch::Ptr addBranch(const string& ruleName, const ofMatrix4x4& transform = ofMatrix4x4());
         
+        unsigned getMaxDepth() const { return maxDepth; }
         void setMaxDepth(unsigned maxDepth) { this->maxDepth = maxDepth; }
         
         void setStartRule(const string& startRule) { this->startRule = startRule; }
