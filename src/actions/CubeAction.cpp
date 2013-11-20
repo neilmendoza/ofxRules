@@ -91,6 +91,7 @@ namespace itg
         {
             mesh.addVertex(vertices[i] * newBranch->getTransform());
             mesh.addNormal(NORMALS[i] * normalMatrix);
+            mesh.addTexCoord(ofVec2f(0.f, branch->getDepth()));
             mesh.addColor(colour);
         }
         return newBranch;

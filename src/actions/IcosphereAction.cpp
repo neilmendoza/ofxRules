@@ -50,8 +50,10 @@ namespace itg
         {
             mesh.addVertex(icoMesh.getVertex(i) * newBranch->getTransform());
             mesh.addNormal(icoMesh.getNormal(i) * normalMatrix);
+            mesh.addTexCoord(ofVec2f(0.f, branch->getDepth()));
             mesh.addColor(colour);
         }
+        //newBranch->setVertexIndex(mesh.getNumVertices());
         return newBranch;
     }
     
