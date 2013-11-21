@@ -134,6 +134,8 @@ namespace itg
     
     void Rules::load(const string& fileName)
     {
+        ruleSets.clear();
+        
         ofxXmlSettings xml;
         xml.loadFile(fileName);
         
@@ -232,8 +234,6 @@ namespace itg
     {
         mesh.clear();
         branches.clear();
-        ruleSets.clear();
-        maxDepth = numeric_limits<unsigned>::max();
     }
     
     Rule::Ptr Rules::addRule(const string& ruleName, float weight)
@@ -247,7 +247,7 @@ namespace itg
     {
         if (ruleSets.find(ruleName) == ruleSets.end())
         {
-            ofLogError() << "No ruleSet with name " << ruleName << "add ruleSet name start or add attribute startRule to outermost tag";
+            ofLogError() << "No ruleSet with name " << ruleName << ".  Add ruleSet name start or attribute startRule to outermost tag.";
             return Branch::Ptr();
         }
         Branch::Ptr branch = Branch::Ptr(new Branch(ruleName, 0, transform));
