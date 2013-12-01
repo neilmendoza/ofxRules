@@ -44,7 +44,7 @@ namespace itg
     const string Rules::DEFAULT_START_RULE = "start";
     
     Rules::Rules() :
-        maxDepth(numeric_limits<unsigned>::max())
+        maxDepth(numeric_limits<unsigned>::max()), numSteps(0)
     {
         registerAction<LineAction>("line");
         registerAction<PointAction>("point");
@@ -72,6 +72,7 @@ namespace itg
     
     unsigned Rules::step(ofMesh& mesh)
     {
+        numSteps++;
         list<Branch::Ptr> newBranches;
         unsigned activeRuleSets = 0;
         
