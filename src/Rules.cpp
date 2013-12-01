@@ -135,6 +135,8 @@ namespace itg
     
     void Rules::load(const string& fileName)
     {
+        ofLogNotice() << "=================================================";
+        ofLogNotice() << "Parsing " << fileName;
         ofxXmlSettings xml;
         xml.loadFile(fileName);
         
@@ -172,7 +174,7 @@ namespace itg
         {
             string name = xml.getAttribute("ruleSet", "name", "", i);
             xml.pushTag("ruleSet", i);
-            
+            ofLogNotice() << "Ruleset: " << name << ", num rules: " << xml.getNumTags("rule");
             for (unsigned j = 0; j < xml.getNumTags("rule"); ++j)
             {
                 Rule::Ptr rule = addRule(name, xml.getAttribute("rule", "weight", 0.f, j));
