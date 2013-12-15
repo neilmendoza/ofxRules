@@ -240,6 +240,7 @@ namespace itg
     {
         mesh.clear();
         branches.clear();
+        numSteps = 0;
     }
     
     Rule::Ptr Rules::addRule(const string& ruleName, float weight)
