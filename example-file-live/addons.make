@@ -1,2 +1,3 @@
 ofxGenerator
 ofxXmlSettings
+ofxRules

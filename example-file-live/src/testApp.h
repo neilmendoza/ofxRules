@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#include "ofxGenerator.h"
+#include "ofxRules.h"
 
 class testApp : public ofBaseApp
 {
@@ -26,7 +26,7 @@ private:
     
     ofLight light;
     ofEasyCam cam;
-    ofxGenerator generator;
+    ofxRules rules;
     vector<string> fileNames;
     ofDirectory dir;
     int selected;

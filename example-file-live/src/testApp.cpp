@@ -21,7 +21,7 @@ void testApp::setup()
         fileNames.push_back(dir.getName(i));
     }
     
-    ofAddListener(generator.fileReloaded, this, &testApp::fileReloaded);
+    ofAddListener(rules.fileReloaded, this, &testApp::fileReloaded);
 }
 
 //--------------------------------------------------------------
@@ -29,7 +29,7 @@ void testApp::update()
 {
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 2));
     
-    generator.step();
+    rules.step();
 }
 
 //--------------------------------------------------------------
@@ -41,7 +41,7 @@ void testApp::draw()
     glEnable(GL_DEPTH_TEST);
     
     cam.begin();
-    generator.draw();
+    rules.draw();
     cam.end();
     
     glPopAttrib();
@@ -56,7 +56,7 @@ void testApp::draw()
 
 void testApp::fileReloaded(list<Branch::Ptr>& branches)
 {
-    generator.addBranch("test");
+    rules.addBranch("test");
 }
 
 //--------------------------------------------------------------
@@ -65,7 +65,7 @@ void testApp::keyPressed(int key)
     switch (key)
     {
         case OF_KEY_RETURN:
-            generator.watchFile(fileNames[selected]);
+            rules.watchFile(fileNames[selected]);
             break;
         
         case OF_KEY_UP:
