@@ -3,12 +3,7 @@
 //--------------------------------------------------------------
 void testApp::setup()
 {
-    ofBackground(0);
-    
-    cam.setNearClip(1e-2);
-    cam.setFarClip(1e4);
-    cam.setDistance(80);
-    cam.lookAt(ofVec3f(0, 20, 0));
+    ofSetFrameRate(60);
     
     light.setPosition(500, 500, 500);
     light.enable();
@@ -56,7 +51,7 @@ void testApp::draw()
 
 void testApp::fileReloaded(list<Branch::Ptr>& branches)
 {
-    rules.addBranch("test");
+    rules.start();
 }
 
 //--------------------------------------------------------------
