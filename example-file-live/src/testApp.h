@@ -28,4 +28,5 @@ private:
     vector<string> fileNames;
     ofDirectory dir;
     int selected;
+    bool drawGui;
 };

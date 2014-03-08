@@ -8,6 +8,10 @@ void testApp::setup()
     light.setPosition(500, 500, 500);
     light.enable();
     
+    cam.setTranslationKey('1');
+    
+    drawGui = true;
+    
     selected = 0;
     dir.listDir("");
     dir.sort();
@@ -39,11 +43,14 @@ void testApp::draw()
     
     glPopAttrib();
     
-    for (unsigned i = 0; i < fileNames.size(); ++i)
+    if (drawGui)
     {
-        if (i == selected) ofSetColor(0, 255, 0);
-        else ofSetColor(255, 0, 0);
-        ofDrawBitmapString(fileNames[i], 10, 20 * (i + 1));
+        for (unsigned i = 0; i < fileNames.size(); ++i)
+        {
+            if (i == selected) ofSetColor(0, 255, 0);
+            else ofSetColor(255, 0, 0);
+            ofDrawBitmapString(fileNames[i], 10, 20 * (i + 1));
+        }
     }
 }
 
@@ -63,6 +70,10 @@ void testApp::keyPressed(int key)
         
         case OF_KEY_DOWN:
             selected = (selected + 1) % fileNames.size();
+            break;
+            
+        case ' ':
+            drawGui = !drawGui;
             break;
             
         default:
