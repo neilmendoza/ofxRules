@@ -73,7 +73,7 @@ namespace itg
         
         void setStartRule(const string& startRule) { this->startRule = startRule; }
         
-        void load(const string& fileName);
+        void load(const string& fileName, bool addStartBranch = true);
         
         void watchFile(const string& watchedFileName, bool autoCheck = true, float checkPeriod = 0.2f);
         

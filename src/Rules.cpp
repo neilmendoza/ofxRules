@@ -134,7 +134,7 @@ namespace itg
         }
     }
     
-    void Rules::load(const string& fileName)
+    void Rules::load(const string& fileName, bool addStartBranch)
     {
         ruleSets.clear();
         
@@ -199,6 +199,8 @@ namespace itg
             }
             xml.popTag();
         }
+        
+        if (addStartBranch) start();
     }
 
     void Rules::watchFile(const string& watchedFileName, bool autoCheck, float checkPeriod)

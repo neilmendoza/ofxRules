@@ -22,8 +22,6 @@ public:
     void gotMessage(ofMessage msg);
     
 private:
-    void fileReloaded(list<Branch::Ptr>& branches);
-    
     ofLight light;
     ofEasyCam cam;
     ofxRules rules;

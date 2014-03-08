@@ -15,8 +15,6 @@ void testApp::setup()
     {
         fileNames.push_back(dir.getName(i));
     }
-    
-    ofAddListener(rules.fileReloaded, this, &testApp::fileReloaded);
 }
 
 //--------------------------------------------------------------
@@ -47,11 +45,6 @@ void testApp::draw()
         else ofSetColor(255, 0, 0);
         ofDrawBitmapString(fileNames[i], 10, 20 * (i + 1));
     }
-}
-
-void testApp::fileReloaded(list<Branch::Ptr>& branches)
-{
-    rules.start();
 }
 
 //--------------------------------------------------------------
