@@ -32,6 +32,16 @@
 #pragma once
 
 #include "Rules.h"
+#include "ConeAction.h"
+#include "CubeAction.h"
+#include "IcosphereAction.h"
+#include "LineAction.h"
+#include "PlaneAction.h"
+#include "PointAction.h"
+#include "SphereAction.h"
+#include "SphereAction.h"
+#include "TransformAction.h"
+#include "TubeAction.h"
 
 using namespace itg;
 
