@@ -1,1 +1,2 @@
-ofxGenerator
+ofxXmlSettings
+ofxRules

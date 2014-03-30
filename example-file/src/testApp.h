@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#include "ofxGenerator.h"
+#include "ofxRules.h"
 
 class testApp : public ofBaseApp
 {
@@ -22,7 +22,7 @@ public:
     void gotMessage(ofMessage msg);
     
 private:
+    ofxRules rules;
     ofEasyCam cam;
-    ofxGenerator generator;
-    ofVboMesh mesh;
+    ofLight light;
 };

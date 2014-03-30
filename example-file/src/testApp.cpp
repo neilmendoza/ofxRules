@@ -3,34 +3,27 @@
 //--------------------------------------------------------------
 void testApp::setup()
 {
-    ofBackground(0);
-    
-    cam.setNearClip(1e-2);
-    cam.setFarClip(1e4);
-    cam.setDistance(80);
-    cam.lookAt(ofVec3f(0, 20, 0));
-
-    mesh.setUsage(GL_DYNAMIC_DRAW);
-    mesh.setMode(OF_PRIMITIVE_LINES);
-    
-    generator.load("test.xml");
-    generator.addBranch("test");
+    ofSetFrameRate(60);
+    rules.load("ico1.xml");
 }
 
 //--------------------------------------------------------------
 void testApp::update()
 {
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 2));
-    
-    generator.step(mesh);
+    rules.step();
 }
 
 //--------------------------------------------------------------
 void testApp::draw()
 {
+    ofEnableDepthTest();
+    light.enable();
     cam.begin();
-    mesh.draw();
+    rules.draw();
     cam.end();
+    light.disable();
+    ofDisableDepthTest();
 }
 
 //--------------------------------------------------------------
