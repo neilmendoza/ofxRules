@@ -33,7 +33,7 @@
 
 namespace itg
 {
-    Action::Action(const string& nextRuleName) : nextRuleName(nextRuleName)
+    Action::Action(const string& nextRuleName) : nextRuleName(nextRuleName), repeat(1)
     {
     }
     

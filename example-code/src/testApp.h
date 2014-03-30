@@ -1,9 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Branch.h"
-#include "RuleSet.h"
-#include "ofxGenerator.h"
+#include "ofxRules.h"
 
 namespace itg
 {
@@ -26,8 +24,7 @@ namespace itg
 
     private:
         Branch::Ptr createBranch(Rule::Ptr rule);
-        ofVboMesh mesh;
         ofEasyCam cam;
-        ofxGenerator generator;
+        ofxRules rules;
     };
 }
