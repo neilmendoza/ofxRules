@@ -136,13 +136,17 @@ namespace itg
     
     void Rules::load(const string& fileName, bool addStartBranch)
     {
+        ofxXmlSettings xml;
+        if (!xml.loadFile(fileName))
+        {
+            ofLogError() << "Could not load file " << fileName;
+            return;
+        }
+        
         ruleSets.clear();
         
         ofLogNotice() << "=================================================";
         ofLogNotice() << "Parsing " << fileName;
-
-        ofxXmlSettings xml;
-        xml.loadFile(fileName);
         
         string meshColourStr = xml.getAttribute("rules", "meshColour", "");
         if (meshColourStr.empty()) enableVertexColours = true;
