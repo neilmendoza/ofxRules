@@ -24,7 +24,6 @@
 		AC8829E001509C780BD959D7 /* SphereAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0F4919FD5862605A70042 /* SphereAction.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		BF29A0A58D32DF5295707E86 /* CubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */; };
-		C897DAAFDD5C73D56AB74C1E /* StopAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A68ED7B3A0C44CAAD0DBD79B /* StopAction.cpp */; };
 		CFAD515E953DDB46A2A5E9B2 /* PointAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB17FDC32C5BB8F13AA6C243 /* PointAction.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -99,7 +98,6 @@
 		92DF20DDA4F8D1A41C982114 /* LineAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LineAction.h; path = ../../../addons/ofxRules/src/actions/LineAction.h; sourceTree = SOURCE_ROOT; };
 		997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CubeAction.cpp; path = ../../../addons/ofxRules/src/actions/CubeAction.cpp; sourceTree = SOURCE_ROOT; };
 		A337FD41DE60AEFF6B069938 /* ofxRules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRules.h; path = ../../../addons/ofxRules/src/ofxRules.h; sourceTree = SOURCE_ROOT; };
-		A68ED7B3A0C44CAAD0DBD79B /* StopAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StopAction.cpp; path = ../../../addons/ofxRules/src/actions/StopAction.cpp; sourceTree = SOURCE_ROOT; };
 		B2185EBB4B9CCEC9C614D8F6 /* RuleSet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RuleSet.cpp; path = ../../../addons/ofxRules/src/RuleSet.cpp; sourceTree = SOURCE_ROOT; };
 		B21E7E5F548EEA92F368040B /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 		C3E63BB591679A4715FC3B0A /* Rule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rule.h; path = ../../../addons/ofxRules/src/Rule.h; sourceTree = SOURCE_ROOT; };
 		C50AF4C1463185E28C033934 /* IcosphereAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IcosphereAction.h; path = ../../../addons/ofxRules/src/actions/IcosphereAction.h; sourceTree = SOURCE_ROOT; };
 		D65F00315B5DF6E53BA58E90 /* RuleSet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RuleSet.h; path = ../../../addons/ofxRules/src/RuleSet.h; sourceTree = SOURCE_ROOT; };
-		D880672081D8B64A1103B446 /* StopAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StopAction.h; path = ../../../addons/ofxRules/src/actions/StopAction.h; sourceTree = SOURCE_ROOT; };
 		D92E1E535416ED8523996A95 /* Action.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Action.h; path = ../../../addons/ofxRules/src/actions/Action.h; sourceTree = SOURCE_ROOT; };
 		DA2003DFDB8A5CD594D1A2BF /* Action.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Action.cpp; path = ../../../addons/ofxRules/src/actions/Action.cpp; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -206,8 +203,6 @@
 				269EE8109C5B1CC470B4C730 /* PointAction.h */,
 				1CD0F4919FD5862605A70042 /* SphereAction.cpp */,
 				F124DCCF5EFEF3FF4765584B /* SphereAction.h */,
-				A68ED7B3A0C44CAAD0DBD79B /* StopAction.cpp */,
-				D880672081D8B64A1103B446 /* StopAction.h */,
 				15457B582405A907FF0E16C7 /* TransformAction.cpp */,
 				F45ACC67CF0E5D062E74B2D5 /* TransformAction.h */,
 				0C2E5605F1947CE0B69247ED /* TubeAction.cpp */,
@@ -442,7 +437,6 @@
 				13F66488E3830D4B149684DE /* PlaneAction.cpp in Sources */,
 				CFAD515E953DDB46A2A5E9B2 /* PointAction.cpp in Sources */,
 				AC8829E001509C780BD959D7 /* SphereAction.cpp in Sources */,
-				C897DAAFDD5C73D56AB74C1E /* StopAction.cpp in Sources */,
 				149DA15B77FA25677DEB0A23 /* TransformAction.cpp in Sources */,
 				42A8F0F6EA7DCD87BEECBF3F /* TubeAction.cpp in Sources */,
 				4A3ADDC2EDF4B33A6D2E5EBE /* Branch.cpp in Sources */,

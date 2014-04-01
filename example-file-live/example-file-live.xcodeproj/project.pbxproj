@@ -43,7 +43,6 @@
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		ac8829e001509c780bd959d7 /* SphereAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1cd0f4919fd5862605a70042 /* SphereAction.cpp */; };
 		bf29a0a58d32df5295707e86 /* CubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997bb7cc94cc0cfafa480fd0 /* CubeAction.cpp */; };
-		c897daafdd5c73d56ab74c1e /* StopAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = a68ed7b3a0c44caad0dbd79b /* StopAction.cpp */; };
 		cfad515e953ddb46a2a5e9b2 /* PointAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = fb17fdc32c5bb8f13aa6c243 /* PointAction.cpp */; };
 		eefc82dbfac63414a172652d /* Rule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85b2ed66b235b728cd2512e1 /* Rule.cpp */; };
 /* End PBXBuildFile section */
@@ -86,13 +85,13 @@
 		1cd0f4919fd5862605a70042 /* SphereAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SphereAction.cpp; path = ../../../addons/ofxRules/src/actions/SphereAction.cpp; sourceTree = SOURCE_ROOT; };
 		230524c8f1bc00d48c902e05 /* Branch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Branch.cpp; path = ../../../addons/ofxRules/src/Branch.cpp; sourceTree = SOURCE_ROOT; };
 		269ee8109c5b1cc470b4c730 /* PointAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PointAction.h; path = ../../../addons/ofxRules/src/actions/PointAction.h; sourceTree = SOURCE_ROOT; };
+		287BE19F18EAD3660058507B /* mushrooms.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = mushrooms.xml; path = bin/data/mushrooms.xml; sourceTree = SOURCE_ROOT; };
+		287BE1A018EAD38E0058507B /* tree_blue.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree_blue.xml; path = bin/data/tree_blue.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD418C3E648008630D9 /* city.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = city.xml; path = bin/data/city.xml; sourceTree = SOURCE_ROOT; };
-		28D29CD518C3E648008630D9 /* clouds_tree.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = clouds_tree.xml; path = bin/data/clouds_tree.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD618C3E648008630D9 /* curly.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = curly.xml; path = bin/data/curly.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD718C3E648008630D9 /* ico1.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ico1.xml; path = bin/data/ico1.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD818C3E648008630D9 /* tree_seuss.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree_seuss.xml; path = bin/data/tree_seuss.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD918C3E648008630D9 /* tree_thin.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree_thin.xml; path = bin/data/tree_thin.xml; sourceTree = SOURCE_ROOT; };
-		28D29CDA18C3E648008630D9 /* tree1.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree1.xml; path = bin/data/tree1.xml; sourceTree = SOURCE_ROOT; };
 		28D29CDB18C3E648008630D9 /* tubey_mess.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tubey_mess.xml; path = bin/data/tubey_mess.xml; sourceTree = SOURCE_ROOT; };
 		28D29CDC18C3E648008630D9 /* tubey_mess2.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tubey_mess2.xml; path = bin/data/tubey_mess2.xml; sourceTree = SOURCE_ROOT; };
 		2b40eda85beb63e46785bc29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
@@ -132,7 +131,6 @@
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
 		a337fd41de60aeff6b069938 /* ofxRules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRules.h; path = ../../../addons/ofxRules/src/ofxRules.h; sourceTree = SOURCE_ROOT; };
-		a68ed7b3a0c44caad0dbd79b /* StopAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = StopAction.cpp; path = ../../../addons/ofxRules/src/actions/StopAction.cpp; sourceTree = SOURCE_ROOT; };
 		b2185ebb4b9ccec9c614d8f6 /* RuleSet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RuleSet.cpp; path = ../../../addons/ofxRules/src/RuleSet.cpp; sourceTree = SOURCE_ROOT; };
 		b21e7e5f548eea92f368040b /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
 		bfc32be12fa32e270decf4ef /* PlaneAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PlaneAction.h; path = ../../../addons/ofxRules/src/actions/PlaneAction.h; sourceTree = SOURCE_ROOT; };
@@ -140,7 +138,6 @@
 		c3e63bb591679a4715fc3b0a /* Rule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rule.h; path = ../../../addons/ofxRules/src/Rule.h; sourceTree = SOURCE_ROOT; };
 		c50af4c1463185e28c033934 /* IcosphereAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IcosphereAction.h; path = ../../../addons/ofxRules/src/actions/IcosphereAction.h; sourceTree = SOURCE_ROOT; };
 		d65f00315b5df6e53ba58e90 /* RuleSet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RuleSet.h; path = ../../../addons/ofxRules/src/RuleSet.h; sourceTree = SOURCE_ROOT; };
-		d880672081d8b64a1103b446 /* StopAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = StopAction.h; path = ../../../addons/ofxRules/src/actions/StopAction.h; sourceTree = SOURCE_ROOT; };
 		d92e1e535416ed8523996a95 /* Action.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Action.h; path = ../../../addons/ofxRules/src/actions/Action.h; sourceTree = SOURCE_ROOT; };
 		da2003dfdb8a5cd594d1a2bf /* Action.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Action.cpp; path = ../../../addons/ofxRules/src/actions/Action.cpp; sourceTree = SOURCE_ROOT; };
 		e4ade8f38c2224b218b64f2b /* Branch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Branch.h; path = ../../../addons/ofxRules/src/Branch.h; sourceTree = SOURCE_ROOT; };
@@ -192,12 +189,12 @@
 			isa = PBXGroup;
 			children = (
 				28D29CD418C3E648008630D9 /* city.xml */,
-				28D29CD518C3E648008630D9 /* clouds_tree.xml */,
 				28D29CD618C3E648008630D9 /* curly.xml */,
 				28D29CD718C3E648008630D9 /* ico1.xml */,
+				287BE1A018EAD38E0058507B /* tree_blue.xml */,
 				28D29CD818C3E648008630D9 /* tree_seuss.xml */,
 				28D29CD918C3E648008630D9 /* tree_thin.xml */,
-				28D29CDA18C3E648008630D9 /* tree1.xml */,
+				287BE19F18EAD3660058507B /* mushrooms.xml */,
 				28D29CDB18C3E648008630D9 /* tubey_mess.xml */,
 				28D29CDC18C3E648008630D9 /* tubey_mess2.xml */,
 			);
@@ -231,8 +228,6 @@
 				269ee8109c5b1cc470b4c730 /* PointAction.h */,
 				1cd0f4919fd5862605a70042 /* SphereAction.cpp */,
 				f124dccf5efef3ff4765584b /* SphereAction.h */,
-				a68ed7b3a0c44caad0dbd79b /* StopAction.cpp */,
-				d880672081d8b64a1103b446 /* StopAction.h */,
 				15457b582405a907ff0e16c7 /* TransformAction.cpp */,
 				f45acc67cf0e5d062e74b2d5 /* TransformAction.h */,
 				0c2e5605f1947ce0b69247ed /* TubeAction.cpp */,
@@ -468,7 +463,6 @@
 				13f66488e3830d4b149684de /* PlaneAction.cpp in Sources */,
 				cfad515e953ddb46a2a5e9b2 /* PointAction.cpp in Sources */,
 				ac8829e001509c780bd959d7 /* SphereAction.cpp in Sources */,
-				c897daafdd5c73d56ab74c1e /* StopAction.cpp in Sources */,
 				149da15b77fa25677deb0a23 /* TransformAction.cpp in Sources */,
 				42a8f0f6ea7dcd87beecbf3f /* TubeAction.cpp in Sources */,
 				4a3addc2edf4b33a6d2e5ebe /* Branch.cpp in Sources */,
