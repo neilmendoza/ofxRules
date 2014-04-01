@@ -1,0 +1,18 @@
+<rules maxDepth="100" startRule="10" primitive="triangles">
+    <ruleSet name="10">
+        <rule weight="20">
+            <tube resolution="4" radius="2" colour="0 0 255" transforms="ty 5" repeat="10" next="20"/>
+        </rule>
+    </ruleSet>
+    <ruleSet name="20">
+        <rule weight="20">
+            <tube resolution="4" radius="2" transforms="tx 5 rz 9" repeat="10" next="20"/>
+            <tube resolution="4" radius="2" transforms="tx -5" repeat="10" next="20"/>
+        </rule>
+        <rule weight="20">
+            <tube resolution="4" radius="2" colour="0 0 255" transforms="tz 5 rz 9" repeat="10" next="20"/>
+            <tube resolution="4" radius="2" colour="0 0 255" transforms="tz -5" repeat="10" next="20"/>
+        </rule>
+    </ruleSet>
+    
+</rules>

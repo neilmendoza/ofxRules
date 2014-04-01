@@ -1,0 +1,52 @@
+<rules startRule="yTranslate" maxDepth="200" primitive="triangles">
+    <ruleSet name="yTranslate">
+        <rule weight="20">
+            <transform transforms="ty -300" next="start"/>
+        </rule>
+    </ruleSet>
+    <ruleSet name="start">
+        <rule weight="20">
+            <tube colour="0 0 255" transforms="tx 2 ty 8 ty 1 sa 0.99" repeat="20" next="middle"/>
+        </rule>
+        <rule weight="20">
+            <tube colour="0 0 255" transforms="tx -1 ty 8 ty 2 sa 0.99" repeat="20" next="middle"/>
+        </rule>
+        <rule weight="20">
+            <tube colour="0 0 255" transforms="tx 1 ty 8 ty -2 sa 0.99" repeat="20" next="middle"/>
+        </rule>
+        
+    </ruleSet>
+    <ruleSet name="middle">
+        <rule weight="100">
+            <tube colour="0 0 255" transforms="tx 1 ty 8 ry 2 sa 0.99" repeat="20" next="middle"/>
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry 6 sa 0.99" repeat="20" next="middle2"/>
+        </rule>
+        <rule weight="20">
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry 6 sa 0.99" repeat="20" next="middle2"/>
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry -6 sa 0.99" repeat="20" next="mirror"/>
+        </rule>
+        <rule weight="20">
+            <cone colour="0 255 255" radius="50" height="100" transforms="rz 90"/>
+        </rule>
+    </ruleSet>
+    <ruleSet name="middle2">
+        <rule weight="100">
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry 6 sa 0.99" repeat="20" next="middle2"/>
+        </rule>
+        <rule weight="20">
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry 6 sa 0.99" repeat="20" next="middle2"/>
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry -6 sa 0.99" repeat="20" next="mirror"/>
+        </rule>
+        <rule weight="20">
+            <cone colour="0 255 255" radius="50" height="100" transforms="rz 90"/>
+        </rule>
+    </ruleSet>
+    <ruleSet name="mirror">
+        <rule weight="100">
+            <tube colour="0 0 255" transforms="tx 20 ty 8 ry -6 sa 0.99" repeat="20" next="mirror"/>
+        </rule>
+        <rule weight="20">
+            <cone colour="0 255 255" radius="50" height="100" transforms="rz 90"/>
+        </rule>
+    </ruleSet>
+</rules>

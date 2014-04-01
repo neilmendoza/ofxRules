@@ -1,0 +1,14 @@
+<rules maxDepth="6" primitive="triangles" meshColour="0" wireframeColour="255">
+    <ruleSet name="start">
+        <rule weight="100">
+					<transform transforms="ty -200" next="sponge"/>
+        </rule>
+    </ruleSet>
+    <ruleSet name="sponge">
+        <rule weight="100">
+            <ico radius="200" transforms="tx 400 ty 400 sa 0.5" next="sponge"/>
+            <ico radius="200" transforms="tx 400 ty 400 ry 120 sa 0.5" next="sponge"/>
+            <ico radius="200" transforms="tx 400 ty 400 ry 240 sa 0.5" next="sponge"/>
+        </rule>
+    </ruleSet>
+</rules>
