@@ -4,7 +4,7 @@
 void testApp::setup()
 {
     ofSetFrameRate(60);
-    rules.load("ico1.xml");
+    rules.load("ico_sponge.xml");
 }
 
 //--------------------------------------------------------------

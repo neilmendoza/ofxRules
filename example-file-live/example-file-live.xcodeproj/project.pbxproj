@@ -85,11 +85,11 @@
 		1cd0f4919fd5862605a70042 /* SphereAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SphereAction.cpp; path = ../../../addons/ofxRules/src/actions/SphereAction.cpp; sourceTree = SOURCE_ROOT; };
 		230524c8f1bc00d48c902e05 /* Branch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Branch.cpp; path = ../../../addons/ofxRules/src/Branch.cpp; sourceTree = SOURCE_ROOT; };
 		269ee8109c5b1cc470b4c730 /* PointAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PointAction.h; path = ../../../addons/ofxRules/src/actions/PointAction.h; sourceTree = SOURCE_ROOT; };
+		281DB9CF18EB02700084D1AF /* ico_sponge.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ico_sponge.xml; path = bin/data/ico_sponge.xml; sourceTree = SOURCE_ROOT; };
 		287BE19F18EAD3660058507B /* mushrooms.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = mushrooms.xml; path = bin/data/mushrooms.xml; sourceTree = SOURCE_ROOT; };
 		287BE1A018EAD38E0058507B /* tree_blue.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree_blue.xml; path = bin/data/tree_blue.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD418C3E648008630D9 /* city.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = city.xml; path = bin/data/city.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD618C3E648008630D9 /* curly.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = curly.xml; path = bin/data/curly.xml; sourceTree = SOURCE_ROOT; };
-		28D29CD718C3E648008630D9 /* ico1.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ico1.xml; path = bin/data/ico1.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD818C3E648008630D9 /* tree_seuss.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree_seuss.xml; path = bin/data/tree_seuss.xml; sourceTree = SOURCE_ROOT; };
 		28D29CD918C3E648008630D9 /* tree_thin.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tree_thin.xml; path = bin/data/tree_thin.xml; sourceTree = SOURCE_ROOT; };
 		28D29CDB18C3E648008630D9 /* tubey_mess.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = tubey_mess.xml; path = bin/data/tubey_mess.xml; sourceTree = SOURCE_ROOT; };
@@ -190,7 +190,7 @@
 			children = (
 				28D29CD418C3E648008630D9 /* city.xml */,
 				28D29CD618C3E648008630D9 /* curly.xml */,
-				28D29CD718C3E648008630D9 /* ico1.xml */,
+				281DB9CF18EB02700084D1AF /* ico_sponge.xml */,
 				287BE1A018EAD38E0058507B /* tree_blue.xml */,
 				28D29CD818C3E648008630D9 /* tree_seuss.xml */,
 				28D29CD918C3E648008630D9 /* tree_thin.xml */,
