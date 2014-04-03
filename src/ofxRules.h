@@ -38,8 +38,6 @@
 #include "LineAction.h"
 #include "PlaneAction.h"
 #include "PointAction.h"
-#include "SphereAction.h"
-#include "SphereAction.h"
 #include "TransformAction.h"
 #include "TubeAction.h"
 
