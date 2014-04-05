@@ -31,7 +31,6 @@
  */
 #pragma once
 
-#include <tr1/memory>
 #include "ofxXmlSettings.h"
 #include "Branch.h"
 
