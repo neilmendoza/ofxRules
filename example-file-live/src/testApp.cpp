@@ -45,12 +45,14 @@ void testApp::draw()
     
     if (drawGui)
     {
+        ofDisableLighting();
         for (unsigned i = 0; i < fileNames.size(); ++i)
         {
             if (i == selected) ofSetColor(0, 255, 0);
             else ofSetColor(255, 0, 0);
             ofDrawBitmapString(fileNames[i], 10, 20 * (i + 1));
         }
+        ofEnableLighting();
     }
 }
 

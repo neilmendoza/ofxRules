@@ -130,7 +130,7 @@ namespace itg
             ofVec3f vertex = mesh.getVertex(i);
             ofVec3f normal = mesh.getNormal(i);
             
-            ofLine(vertex, vertex + size * normal);
+            ofDrawLine(vertex, vertex + size * normal);
         }
     }
     
@@ -210,7 +210,7 @@ namespace itg
     void Rules::watchFile(const string& watchedFileName, bool autoCheck, float checkPeriod)
     {
         this->watchedFileName = watchedFileName;
-        watchedLastModified = Poco::Timestamp(0);
+        watchedLastModified = 0;
         if (autoCheck)
         {
             lastChecked = 0.f;
@@ -230,14 +230,15 @@ namespace itg
     
     void Rules::checkWatchedFile()
     {
-        Poco::File file = ofFile(watchedFileName).getPocoFile();
-        Poco::Timestamp timestamp = file.getLastModified();
-        if (timestamp != watchedLastModified)
+        ofFile watchedFile(watchedFileName);
+        std::time_t time = std::filesystem::last_write_time(watchedFile.getAbsolutePath());
+        
+        if (time != watchedLastModified)
         {
             clear();
             load(watchedFileName);
             ofNotifyEvent(fileReloaded, branches, this);
-            watchedLastModified = timestamp;
+            watchedLastModified = time;
         }
     }
     

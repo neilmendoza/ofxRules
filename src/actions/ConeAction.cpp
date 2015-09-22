@@ -36,7 +36,7 @@ namespace itg
     void ConeAction::setParameters(float radius, float height, unsigned resolution)
     {
         coneMesh = Action::cone(radius, height, resolution + 1);
-        ofVec3f direction = ((ofVec3f() * getTransform()) - ofVec3f()).normalized();
+        ofVec3f direction = ((ofVec3f() * getTransform()) - ofVec3f()).getNormalized();
         ofMatrix4x4 r;
         r.makeRotationMatrix(ofVec3f(0, 1, 0), direction);
         r.rotate(180, 1, 0, 0);

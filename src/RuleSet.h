@@ -33,16 +33,9 @@
 
 #include "ofMain.h"
 #include "Rule.h"
-#ifdef TARGET_WIN32
-#include <memory>
-#else
-#include <tr1/memory>
-#endif
 
 namespace itg
 {
-    using namespace tr1;
-    
     class RuleSet
     {
     public:

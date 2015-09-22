@@ -1,3 +1,4 @@
 ofxGenerator
 ofxXmlSettings
 ofxRules
+addons

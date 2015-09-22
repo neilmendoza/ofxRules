@@ -35,7 +35,7 @@ namespace itg
 {
     void TubeAction::setRadius(float radius)
     {
-        ofVec3f direction = ((ofVec3f() * getTransform()) - ofVec3f()).normalized();
+        ofVec3f direction = ((ofVec3f() * getTransform()) - ofVec3f()).getNormalized();
         ofMatrix4x4 r;
         r.makeRotationMatrix(ofVec3f(0, 1, 0), direction);
         ofVec3f normal = ofVec3f(0, 0, 1);

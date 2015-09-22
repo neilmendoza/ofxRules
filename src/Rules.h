@@ -115,7 +115,7 @@ namespace itg
         ofFloatColor wireframeColour;
         
         // file watching stuff
-        Poco::Timestamp watchedLastModified;
+        std::time_t watchedLastModified;
         string watchedFileName;
         float lastChecked;
         float checkPeriod;
