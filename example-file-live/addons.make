@@ -1,4 +1,2 @@
-ofxGenerator
-ofxXmlSettings
 ofxRules
-addons
+ofxXmlSettings

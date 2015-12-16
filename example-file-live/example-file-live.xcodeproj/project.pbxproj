@@ -60,46 +60,46 @@
 
 /* Begin PBXFileReference section */
 		00A1BFCBB38848AD0E0C8539 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
-		01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
-		0A68ED46E9F6EC9C38585AEA /* LineAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LineAction.cpp; path = ../src/actions/LineAction.cpp; sourceTree = SOURCE_ROOT; };
-		0C2E5605F1947CE0B69247ED /* TubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TubeAction.cpp; path = ../src/actions/TubeAction.cpp; sourceTree = SOURCE_ROOT; };
-		15457B582405A907FF0E16C7 /* TransformAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TransformAction.cpp; path = ../src/actions/TransformAction.cpp; sourceTree = SOURCE_ROOT; };
-		230524C8F1BC00D48C902E05 /* Branch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Branch.cpp; path = ../src/Branch.cpp; sourceTree = SOURCE_ROOT; };
-		269EE8109C5B1CC470B4C730 /* PointAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PointAction.h; path = ../src/actions/PointAction.h; sourceTree = SOURCE_ROOT; };
-		2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
+		01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		0A68ED46E9F6EC9C38585AEA /* LineAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LineAction.cpp; path = ../../../addons/ofxRules/src/actions/LineAction.cpp; sourceTree = SOURCE_ROOT; };
+		0C2E5605F1947CE0B69247ED /* TubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TubeAction.cpp; path = ../../../addons/ofxRules/src/actions/TubeAction.cpp; sourceTree = SOURCE_ROOT; };
+		15457B582405A907FF0E16C7 /* TransformAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TransformAction.cpp; path = ../../../addons/ofxRules/src/actions/TransformAction.cpp; sourceTree = SOURCE_ROOT; };
+		230524C8F1BC00D48C902E05 /* Branch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Branch.cpp; path = ../../../addons/ofxRules/src/Branch.cpp; sourceTree = SOURCE_ROOT; };
+		269EE8109C5B1CC470B4C730 /* PointAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PointAction.h; path = ../../../addons/ofxRules/src/actions/PointAction.h; sourceTree = SOURCE_ROOT; };
+		2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
 		2D129AB0F7D46B8DFCEADEDB /* testApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
-		2D1BA25C8AABF5548A01D066 /* ConeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConeAction.h; path = ../src/actions/ConeAction.h; sourceTree = SOURCE_ROOT; };
-		4CBD2C758FB6082F09A40020 /* ConeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConeAction.cpp; path = ../src/actions/ConeAction.cpp; sourceTree = SOURCE_ROOT; };
-		50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
-		680681F06CE81313E3B7453E /* CubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CubeAction.h; path = ../src/actions/CubeAction.h; sourceTree = SOURCE_ROOT; };
-		6E9F3175E0383B24D42ECB40 /* TubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TubeAction.h; path = ../src/actions/TubeAction.h; sourceTree = SOURCE_ROOT; };
-		74274F2A9C4726E149B2DB93 /* Rules.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Rules.cpp; path = ../src/Rules.cpp; sourceTree = SOURCE_ROOT; };
-		832BDC407620CDBA568B713D /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlerror.cpp; path = ../../ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
-		85B2ED66B235B728CD2512E1 /* Rule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Rule.cpp; path = ../src/Rule.cpp; sourceTree = SOURCE_ROOT; };
-		8E90595CEDF4D6EECCAA4DCE /* PlaneAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PlaneAction.cpp; path = ../src/actions/PlaneAction.cpp; sourceTree = SOURCE_ROOT; };
-		92DF20DDA4F8D1A41C982114 /* LineAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LineAction.h; path = ../src/actions/LineAction.h; sourceTree = SOURCE_ROOT; };
-		997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CubeAction.cpp; path = ../src/actions/CubeAction.cpp; sourceTree = SOURCE_ROOT; };
-		A337FD41DE60AEFF6B069938 /* ofxRules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRules.h; path = ../src/ofxRules.h; sourceTree = SOURCE_ROOT; };
-		B2185EBB4B9CCEC9C614D8F6 /* RuleSet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RuleSet.cpp; path = ../src/RuleSet.cpp; sourceTree = SOURCE_ROOT; };
-		B21E7E5F548EEA92F368040B /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
-		BFC32BE12FA32E270DECF4EF /* PlaneAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PlaneAction.h; path = ../src/actions/PlaneAction.h; sourceTree = SOURCE_ROOT; };
-		BFD66E348EEB3DF4BFAE18C1 /* IcosphereAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IcosphereAction.cpp; path = ../src/actions/IcosphereAction.cpp; sourceTree = SOURCE_ROOT; };
-		C3E63BB591679A4715FC3B0A /* Rule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rule.h; path = ../src/Rule.h; sourceTree = SOURCE_ROOT; };
-		C50AF4C1463185E28C033934 /* IcosphereAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IcosphereAction.h; path = ../src/actions/IcosphereAction.h; sourceTree = SOURCE_ROOT; };
-		D65F00315B5DF6E53BA58E90 /* RuleSet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RuleSet.h; path = ../src/RuleSet.h; sourceTree = SOURCE_ROOT; };
-		D92E1E535416ED8523996A95 /* Action.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Action.h; path = ../src/actions/Action.h; sourceTree = SOURCE_ROOT; };
-		DA2003DFDB8A5CD594D1A2BF /* Action.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Action.cpp; path = ../src/actions/Action.cpp; sourceTree = SOURCE_ROOT; };
+		2D1BA25C8AABF5548A01D066 /* ConeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConeAction.h; path = ../../../addons/ofxRules/src/actions/ConeAction.h; sourceTree = SOURCE_ROOT; };
+		4CBD2C758FB6082F09A40020 /* ConeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConeAction.cpp; path = ../../../addons/ofxRules/src/actions/ConeAction.cpp; sourceTree = SOURCE_ROOT; };
+		50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
+		680681F06CE81313E3B7453E /* CubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CubeAction.h; path = ../../../addons/ofxRules/src/actions/CubeAction.h; sourceTree = SOURCE_ROOT; };
+		6E9F3175E0383B24D42ECB40 /* TubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TubeAction.h; path = ../../../addons/ofxRules/src/actions/TubeAction.h; sourceTree = SOURCE_ROOT; };
+		74274F2A9C4726E149B2DB93 /* Rules.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Rules.cpp; path = ../../../addons/ofxRules/src/Rules.cpp; sourceTree = SOURCE_ROOT; };
+		832BDC407620CDBA568B713D /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
+		85B2ED66B235B728CD2512E1 /* Rule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Rule.cpp; path = ../../../addons/ofxRules/src/Rule.cpp; sourceTree = SOURCE_ROOT; };
+		8E90595CEDF4D6EECCAA4DCE /* PlaneAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PlaneAction.cpp; path = ../../../addons/ofxRules/src/actions/PlaneAction.cpp; sourceTree = SOURCE_ROOT; };
+		92DF20DDA4F8D1A41C982114 /* LineAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LineAction.h; path = ../../../addons/ofxRules/src/actions/LineAction.h; sourceTree = SOURCE_ROOT; };
+		997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CubeAction.cpp; path = ../../../addons/ofxRules/src/actions/CubeAction.cpp; sourceTree = SOURCE_ROOT; };
+		A337FD41DE60AEFF6B069938 /* ofxRules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRules.h; path = ../../../addons/ofxRules/src/ofxRules.h; sourceTree = SOURCE_ROOT; };
+		B2185EBB4B9CCEC9C614D8F6 /* RuleSet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RuleSet.cpp; path = ../../../addons/ofxRules/src/RuleSet.cpp; sourceTree = SOURCE_ROOT; };
+		B21E7E5F548EEA92F368040B /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
+		BFC32BE12FA32E270DECF4EF /* PlaneAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PlaneAction.h; path = ../../../addons/ofxRules/src/actions/PlaneAction.h; sourceTree = SOURCE_ROOT; };
+		BFD66E348EEB3DF4BFAE18C1 /* IcosphereAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IcosphereAction.cpp; path = ../../../addons/ofxRules/src/actions/IcosphereAction.cpp; sourceTree = SOURCE_ROOT; };
+		C3E63BB591679A4715FC3B0A /* Rule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rule.h; path = ../../../addons/ofxRules/src/Rule.h; sourceTree = SOURCE_ROOT; };
+		C50AF4C1463185E28C033934 /* IcosphereAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IcosphereAction.h; path = ../../../addons/ofxRules/src/actions/IcosphereAction.h; sourceTree = SOURCE_ROOT; };
+		D65F00315B5DF6E53BA58E90 /* RuleSet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RuleSet.h; path = ../../../addons/ofxRules/src/RuleSet.h; sourceTree = SOURCE_ROOT; };
+		D92E1E535416ED8523996A95 /* Action.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Action.h; path = ../../../addons/ofxRules/src/actions/Action.h; sourceTree = SOURCE_ROOT; };
+		DA2003DFDB8A5CD594D1A2BF /* Action.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Action.cpp; path = ../../../addons/ofxRules/src/actions/Action.cpp; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E4ADE8F38C2224B218B64F2B /* Branch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Branch.h; path = ../src/Branch.h; sourceTree = SOURCE_ROOT; };
+		E4ADE8F38C2224B218B64F2B /* Branch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Branch.h; path = ../../../addons/ofxRules/src/Branch.h; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* example-file-liveDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-file-liveDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		EF484E10699C9165272D3F8D /* Rules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rules.h; path = ../src/Rules.h; sourceTree = SOURCE_ROOT; };
-		F45ACC67CF0E5D062E74B2D5 /* TransformAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TransformAction.h; path = ../src/actions/TransformAction.h; sourceTree = SOURCE_ROOT; };
-		FB17FDC32C5BB8F13AA6C243 /* PointAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PointAction.cpp; path = ../src/actions/PointAction.cpp; sourceTree = SOURCE_ROOT; };
-		FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlparser.cpp; path = ../../ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		EF484E10699C9165272D3F8D /* Rules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rules.h; path = ../../../addons/ofxRules/src/Rules.h; sourceTree = SOURCE_ROOT; };
+		F45ACC67CF0E5D062E74B2D5 /* TransformAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TransformAction.h; path = ../../../addons/ofxRules/src/actions/TransformAction.h; sourceTree = SOURCE_ROOT; };
+		FB17FDC32C5BB8F13AA6C243 /* PointAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PointAction.cpp; path = ../../../addons/ofxRules/src/actions/PointAction.cpp; sourceTree = SOURCE_ROOT; };
+		FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlparser.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +173,13 @@
 			name = src;
 			sourceTree = "<group>";
 		};
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
 		6E54289412D2D94F45A05113 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,8 +203,8 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */,
 				457D001CB6496008EBD7E1DD /* ofxRules */,
+				1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* example-file-liveDebug.app */,
 			);
 			sourceTree = "<group>";
@@ -330,10 +338,6 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				29D734F0DDECC8C5978185D7 /* testApp.cpp in Sources */,
-				63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */,
-				933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */,
-				9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */,
-				5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */,
 				7019120E8781C12FA9AFA5DB /* Action.cpp in Sources */,
 				7C74C0E9368C47FF556E33DA /* ConeAction.cpp in Sources */,
 				BF29A0A58D32DF5295707E86 /* CubeAction.cpp in Sources */,
@@ -347,6 +351,10 @@
 				EEFC82DBFAC63414A172652D /* Rule.cpp in Sources */,
 				9EF5885C3D7A476AC67A82B5 /* Rules.cpp in Sources */,
 				4FA5D5B79E39177F7FA92296 /* RuleSet.cpp in Sources */,
+				63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */,
+				933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */,
+				9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */,
+				5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,16 +390,11 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxGenerator/libs,
-					../../../addons/ofxGenerator/src,
-					../../../addons/ofxXmlSettings/libs,
-					../../../addons/ofxXmlSettings/src,
-					../../../addons/ofxRules/libs,
+					src,
 					../../../addons/ofxRules/src,
 					../../../addons/ofxRules/src/actions,
-					../../../addons/libs,
-					../../../addons/src,
-					src,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,16 +428,11 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxGenerator/libs,
-					../../../addons/ofxGenerator/src,
-					../../../addons/ofxXmlSettings/libs,
-					../../../addons/ofxXmlSettings/src,
-					../../../addons/ofxRules/libs,
+					src,
 					../../../addons/ofxRules/src,
 					../../../addons/ofxRules/src/actions,
-					../../../addons/libs,
-					../../../addons/src,
-					src,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -461,23 +459,18 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxGenerator/libs,
-					../../../addons/ofxGenerator/src,
-					../../../addons/ofxXmlSettings/libs,
-					../../../addons/ofxXmlSettings/src,
-					../../../addons/ofxRules/libs,
+					src,
 					../../../addons/ofxRules/src,
 					../../../addons/ofxRules/src/actions,
-					../../../addons/libs,
-					../../../addons/src,
-					src,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "example-file-liveDebug";
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -497,23 +490,18 @@
 				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxGenerator/libs,
-					../../../addons/ofxGenerator/src,
-					../../../addons/ofxXmlSettings/libs,
-					../../../addons/ofxXmlSettings/src,
-					../../../addons/ofxRules/libs,
+					src,
 					../../../addons/ofxRules/src,
 					../../../addons/ofxRules/src/actions,
-					../../../addons/libs,
-					../../../addons/src,
-					src,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "example-file-live";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
