@@ -157,7 +157,7 @@ namespace itg
     {
         //ofMesh icosahedron = ofGetIcosahedronMesh( 1.f );
         ofMesh icosahedron = Action::icosahedron( 1.f );
-        vector<ofVec3f> vertices = icosahedron.getVertices();
+        vector<glm::vec3> vertices = icosahedron.getVertices();
         vector<ofIndexType> faces = icosahedron.getIndices();
         
         int size = faces.size();
@@ -287,7 +287,7 @@ namespace itg
         
         sphere.addIndices( faces );
         sphere.addNormals( vertices );
-        sphere.addTexCoords( texCoords );
+        for (auto& t : texCoords) sphere.addTexCoord(t);
         
         for(unsigned int i = 0; i < vertices.size(); i++ ) {
             vertices[i] *= radius;

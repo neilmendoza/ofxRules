@@ -42,8 +42,8 @@ namespace itg
         r.rotate(180, 1, 0, 0);
         for (unsigned i = 0; i < coneMesh.getNumVertices(); ++i)
         {
-            coneMesh.setVertex(i, coneMesh.getVertex(i) * r);
-            coneMesh.setNormal(i, coneMesh.getNormal(i) * r);
+            coneMesh.setVertex(i, ofVec3f(coneMesh.getVertex(i)) * r);
+            coneMesh.setNormal(i, ofVec3f(coneMesh.getNormal(i)) * r);
         }
     }
     
@@ -57,8 +57,8 @@ namespace itg
         }
         for (unsigned i = 0; i < coneMesh.getNumVertices(); ++i)
         {
-            mesh.addVertex(coneMesh.getVertex(i) * newBranch->getTransform());
-            mesh.addNormal(coneMesh.getNormal(i) * normalMatrix);
+            mesh.addVertex(ofVec3f(coneMesh.getVertex(i)) * newBranch->getTransform());
+            mesh.addNormal(ofVec3f(coneMesh.getNormal(i)) * normalMatrix);
             mesh.addTexCoord(ofVec2f(0.f, branch->getDepth()));
             mesh.addColor(colour);
         }

@@ -48,8 +48,8 @@ namespace itg
         }
         for (unsigned i = 0; i < icoMesh.getNumVertices(); ++i)
         {
-            mesh.addVertex(icoMesh.getVertex(i) * newBranch->getTransform());
-            mesh.addNormal(icoMesh.getNormal(i) * normalMatrix);
+            mesh.addVertex(ofVec3f(icoMesh.getVertex(i)) * newBranch->getTransform());
+            mesh.addNormal(ofVec3f(icoMesh.getNormal(i)) * normalMatrix);
             mesh.addTexCoord(ofVec2f(0.f, branch->getDepth()));
             mesh.addColor(colour);
         }
