@@ -3,50 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13F66488E3830D4B149684DE /* PlaneAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E90595CEDF4D6EECCAA4DCE /* PlaneAction.cpp */; };
-		149DA15B77FA25677DEB0A23 /* TransformAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15457B582405A907FF0E16C7 /* TransformAction.cpp */; };
-		1551F35BCC831111B664BE5A /* IcosphereAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFD66E348EEB3DF4BFAE18C1 /* IcosphereAction.cpp */; };
-		29D734F0DDECC8C5978185D7 /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00A1BFCBB38848AD0E0C8539 /* testApp.cpp */; };
-		41C1B6A049F720B359E347B5 /* LineAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A68ED46E9F6EC9C38585AEA /* LineAction.cpp */; };
-		42A8F0F6EA7DCD87BEECBF3F /* TubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E5605F1947CE0B69247ED /* TubeAction.cpp */; };
-		4A3ADDC2EDF4B33A6D2E5EBE /* Branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 230524C8F1BC00D48C902E05 /* Branch.cpp */; };
-		4FA5D5B79E39177F7FA92296 /* RuleSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2185EBB4B9CCEC9C614D8F6 /* RuleSet.cpp */; };
-		5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */; };
-		63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */; };
-		7019120E8781C12FA9AFA5DB /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA2003DFDB8A5CD594D1A2BF /* Action.cpp */; };
-		7C74C0E9368C47FF556E33DA /* ConeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD2C758FB6082F09A40020 /* ConeAction.cpp */; };
-		933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */; };
-		9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 832BDC407620CDBA568B713D /* tinyxmlerror.cpp */; };
-		9EF5885C3D7A476AC67A82B5 /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74274F2A9C4726E149B2DB93 /* Rules.cpp */; };
-		BF29A0A58D32DF5295707E86 /* CubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */; };
-		CFAD515E953DDB46A2A5E9B2 /* PointAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB17FDC32C5BB8F13AA6C243 /* PointAction.cpp */; };
-		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		"034D5586-6C74-494D-8C53-16202FA2B2AC" /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "1AD174FA-B9C7-4FA3-A71B-0ED96D416740" /* tinyxmlparser.cpp */; };
+		"1D09A02D-22C0-47C5-975D-379C883D23FE" /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "4B05D99C-5DB5-4B65-93BE-5C7CFD73D292" /* tinyxml.cpp */; };
+		"28EF44D6-7F57-47C1-96CB-48A0261C0924" /* RuleSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "C3715A13-768B-47A5-850A-8C57C09158CD" /* RuleSet.cpp */; };
+		"41279C90-7FD3-4A9F-9C97-186D0B07C459" /* TransformAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "FCE629C7-AE34-4531-B1E5-CAD5F7A9D358" /* TransformAction.cpp */; };
+		"418361EF-CFBD-40F5-9A08-98FF864EC9CB" /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "71FB53CE-58B9-4B86-962F-E31819D07EFD" /* testApp.cpp */; };
+		"42BB8D38-FD4A-4627-82E5-376ECC580D68" /* LineAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "4FDC59E5-941E-46CE-989A-E12701B8D675" /* LineAction.cpp */; };
+		"4347673D-4488-49B2-A7A1-4D24145FE028" /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "4D020228-01CD-4108-BB99-1562AE7392EC" /* Action.cpp */; };
+		"59F6563B-8F3D-4A9B-BE2E-AD9E841F65B7" /* PlaneAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "B941ECAB-3B38-4DDD-B0B4-A5FB36CEA2A1" /* PlaneAction.cpp */; };
+		"91434D13-F95A-4067-BA79-F9661303DFF2" /* PointAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "0E2435F5-F531-4BCE-87ED-7C98C64FDBB3" /* PointAction.cpp */; };
+		"927DAD19-6613-4BAF-A858-16AE7FB9EAA3" /* TubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "1C9B3788-9234-4A6D-8D6E-E62A3EE64451" /* TubeAction.cpp */; };
+		"A87C893B-C035-44CC-834B-80A7688B7A98" /* Rules.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "CD72BBB5-1A3F-4ECD-ACAF-1E8BAD62C6C2" /* Rules.cpp */; };
+		"AE6C46CF-E10F-4A3A-A392-F12B4128BF31" /* CubeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "8C851A2F-D1BC-4246-A711-D79A98C1A17F" /* CubeAction.cpp */; };
+		"B18972C9-DF35-46DF-B6CF-98F1BDB692E6" /* ConeAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "A83D928F-5E55-4866-9B93-97DDD1BB04C8" /* ConeAction.cpp */; };
+		"B34CE60D-0270-490D-99EA-73D3004FDF6A" /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "00E45D86-A8D8-466E-83F8-9F9C53BE5A51" /* ofxXmlSettings.cpp */; };
+		"B8545085-170F-4744-BAA9-408713176C9B" /* Branch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "E8B8FAB9-E6B3-42E9-A809-5E75C703615D" /* Branch.cpp */; };
+		"C10F4E97-6437-490D-A8D4-FC6D9DD56E83" /* Rule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "DE853EEE-5F29-48DD-97CD-9014B227F0E8" /* Rule.cpp */; };
+		"D8F97787-91D5-488F-A3C3-F4A6DA704522" /* IcosphereAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "92BC9AF4-5998-4AA9-B549-66B6FF2DF8DC" /* IcosphereAction.cpp */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
-		EEFC82DBFAC63414A172652D /* Rule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85B2ED66B235B728CD2512E1 /* Rule.cpp */; };
+		"EF88CDC7-806A-4FD5-B763-02F2AE68CCED" /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "EDE3AE7E-F0B9-4A1B-B0D1-59B4C7F1CD50" /* tinyxmlerror.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
-			remoteInfo = openFrameworks;
-		};
-		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
-			remoteInfo = openFrameworks;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
+		E4A5B60F29BAAAE400C2D356 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,47 +50,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		00A1BFCBB38848AD0E0C8539 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
-		01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
-		0A68ED46E9F6EC9C38585AEA /* LineAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LineAction.cpp; path = ../../../addons/ofxRules/src/actions/LineAction.cpp; sourceTree = SOURCE_ROOT; };
-		0C2E5605F1947CE0B69247ED /* TubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TubeAction.cpp; path = ../../../addons/ofxRules/src/actions/TubeAction.cpp; sourceTree = SOURCE_ROOT; };
-		15457B582405A907FF0E16C7 /* TransformAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TransformAction.cpp; path = ../../../addons/ofxRules/src/actions/TransformAction.cpp; sourceTree = SOURCE_ROOT; };
-		230524C8F1BC00D48C902E05 /* Branch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Branch.cpp; path = ../../../addons/ofxRules/src/Branch.cpp; sourceTree = SOURCE_ROOT; };
-		269EE8109C5B1CC470B4C730 /* PointAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PointAction.h; path = ../../../addons/ofxRules/src/actions/PointAction.h; sourceTree = SOURCE_ROOT; };
-		2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
-		2D129AB0F7D46B8DFCEADEDB /* testApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
-		2D1BA25C8AABF5548A01D066 /* ConeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ConeAction.h; path = ../../../addons/ofxRules/src/actions/ConeAction.h; sourceTree = SOURCE_ROOT; };
-		4CBD2C758FB6082F09A40020 /* ConeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ConeAction.cpp; path = ../../../addons/ofxRules/src/actions/ConeAction.cpp; sourceTree = SOURCE_ROOT; };
-		50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
-		680681F06CE81313E3B7453E /* CubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CubeAction.h; path = ../../../addons/ofxRules/src/actions/CubeAction.h; sourceTree = SOURCE_ROOT; };
-		6E9F3175E0383B24D42ECB40 /* TubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TubeAction.h; path = ../../../addons/ofxRules/src/actions/TubeAction.h; sourceTree = SOURCE_ROOT; };
-		74274F2A9C4726E149B2DB93 /* Rules.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Rules.cpp; path = ../../../addons/ofxRules/src/Rules.cpp; sourceTree = SOURCE_ROOT; };
-		832BDC407620CDBA568B713D /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
-		85B2ED66B235B728CD2512E1 /* Rule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Rule.cpp; path = ../../../addons/ofxRules/src/Rule.cpp; sourceTree = SOURCE_ROOT; };
-		8E90595CEDF4D6EECCAA4DCE /* PlaneAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PlaneAction.cpp; path = ../../../addons/ofxRules/src/actions/PlaneAction.cpp; sourceTree = SOURCE_ROOT; };
-		92DF20DDA4F8D1A41C982114 /* LineAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LineAction.h; path = ../../../addons/ofxRules/src/actions/LineAction.h; sourceTree = SOURCE_ROOT; };
-		997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = CubeAction.cpp; path = ../../../addons/ofxRules/src/actions/CubeAction.cpp; sourceTree = SOURCE_ROOT; };
-		A337FD41DE60AEFF6B069938 /* ofxRules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRules.h; path = ../../../addons/ofxRules/src/ofxRules.h; sourceTree = SOURCE_ROOT; };
-		B2185EBB4B9CCEC9C614D8F6 /* RuleSet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = RuleSet.cpp; path = ../../../addons/ofxRules/src/RuleSet.cpp; sourceTree = SOURCE_ROOT; };
-		B21E7E5F548EEA92F368040B /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
-		BFC32BE12FA32E270DECF4EF /* PlaneAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PlaneAction.h; path = ../../../addons/ofxRules/src/actions/PlaneAction.h; sourceTree = SOURCE_ROOT; };
-		BFD66E348EEB3DF4BFAE18C1 /* IcosphereAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IcosphereAction.cpp; path = ../../../addons/ofxRules/src/actions/IcosphereAction.cpp; sourceTree = SOURCE_ROOT; };
-		C3E63BB591679A4715FC3B0A /* Rule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rule.h; path = ../../../addons/ofxRules/src/Rule.h; sourceTree = SOURCE_ROOT; };
-		C50AF4C1463185E28C033934 /* IcosphereAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IcosphereAction.h; path = ../../../addons/ofxRules/src/actions/IcosphereAction.h; sourceTree = SOURCE_ROOT; };
-		D65F00315B5DF6E53BA58E90 /* RuleSet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = RuleSet.h; path = ../../../addons/ofxRules/src/RuleSet.h; sourceTree = SOURCE_ROOT; };
-		D92E1E535416ED8523996A95 /* Action.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Action.h; path = ../../../addons/ofxRules/src/actions/Action.h; sourceTree = SOURCE_ROOT; };
-		DA2003DFDB8A5CD594D1A2BF /* Action.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Action.cpp; path = ../../../addons/ofxRules/src/actions/Action.cpp; sourceTree = SOURCE_ROOT; };
-		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E4ADE8F38C2224B218B64F2B /* Branch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Branch.h; path = ../../../addons/ofxRules/src/Branch.h; sourceTree = SOURCE_ROOT; };
+		"00E45D86-A8D8-466E-83F8-9F9C53BE5A51" /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
+		"062A5628-E305-4BE4-9DA7-5843CFE2A781" /* Rule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Rule.h; path = ../../../addons/ofxRules/src/Rule.h; sourceTree = SOURCE_ROOT; };
+		"0E2435F5-F531-4BCE-87ED-7C98C64FDBB3" /* PointAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PointAction.cpp; path = ../../../addons/ofxRules/src/actions/PointAction.cpp; sourceTree = SOURCE_ROOT; };
+		"187D3592-C0EE-47E0-AC89-F0AD578CE86A" /* PointAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PointAction.h; path = ../../../addons/ofxRules/src/actions/PointAction.h; sourceTree = SOURCE_ROOT; };
+		191CD6FA2847E21E0085CBB6 /* of.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = of.entitlements; sourceTree = "<group>"; };
+		191EF70929D778A400F35F26 /* openFrameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openFrameworks; path = ../../../libs/openFrameworks; sourceTree = SOURCE_ROOT; };
+		"1AD174FA-B9C7-4FA3-A71B-0ED96D416740" /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxmlparser.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		"1C9B3788-9234-4A6D-8D6E-E62A3EE64451" /* TubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TubeAction.cpp; path = ../../../addons/ofxRules/src/actions/TubeAction.cpp; sourceTree = SOURCE_ROOT; };
+		"221A701E-BB3D-4F24-BC74-3D766066AA05" /* CubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CubeAction.h; path = ../../../addons/ofxRules/src/actions/CubeAction.h; sourceTree = SOURCE_ROOT; };
+		"2AF7B20F-61AF-431B-B14D-038D35F54832" /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		"3F462BDC-56D6-4BAC-8A38-F909DF2C6890" /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
+		"411D97F4-F2EC-41B0-AE81-9AF31A4DE9F6" /* Branch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Branch.h; path = ../../../addons/ofxRules/src/Branch.h; sourceTree = SOURCE_ROOT; };
+		"4B05D99C-5DB5-4B65-93BE-5C7CFD73D292" /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
+		"4C5B7673-3645-4621-9591-6C2478D89C8B" /* PlaneAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PlaneAction.h; path = ../../../addons/ofxRules/src/actions/PlaneAction.h; sourceTree = SOURCE_ROOT; };
+		"4D020228-01CD-4108-BB99-1562AE7392EC" /* Action.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Action.cpp; path = ../../../addons/ofxRules/src/actions/Action.cpp; sourceTree = SOURCE_ROOT; };
+		"4FDC59E5-941E-46CE-989A-E12701B8D675" /* LineAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = LineAction.cpp; path = ../../../addons/ofxRules/src/actions/LineAction.cpp; sourceTree = SOURCE_ROOT; };
+		"6E2FB073-EA09-41B0-AF30-48DF0D4DEA56" /* LineAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = LineAction.h; path = ../../../addons/ofxRules/src/actions/LineAction.h; sourceTree = SOURCE_ROOT; };
+		"71FB53CE-58B9-4B86-962F-E31819D07EFD" /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
+		"7423C4E1-B6AC-4521-906E-5870296B0A76" /* ConeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ConeAction.h; path = ../../../addons/ofxRules/src/actions/ConeAction.h; sourceTree = SOURCE_ROOT; };
+		"85D9F696-B0B7-4800-80BF-4277E4CC77A4" /* TubeAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TubeAction.h; path = ../../../addons/ofxRules/src/actions/TubeAction.h; sourceTree = SOURCE_ROOT; };
+		"8C851A2F-D1BC-4246-A711-D79A98C1A17F" /* CubeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CubeAction.cpp; path = ../../../addons/ofxRules/src/actions/CubeAction.cpp; sourceTree = SOURCE_ROOT; };
+		"92BC9AF4-5998-4AA9-B549-66B6FF2DF8DC" /* IcosphereAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = IcosphereAction.cpp; path = ../../../addons/ofxRules/src/actions/IcosphereAction.cpp; sourceTree = SOURCE_ROOT; };
+		"9B909B96-89DC-49BE-ADCA-CB75680A77CC" /* RuleSet.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = RuleSet.h; path = ../../../addons/ofxRules/src/RuleSet.h; sourceTree = SOURCE_ROOT; };
+		"A83D928F-5E55-4866-9B93-97DDD1BB04C8" /* ConeAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ConeAction.cpp; path = ../../../addons/ofxRules/src/actions/ConeAction.cpp; sourceTree = SOURCE_ROOT; };
+		"B7E24232-7E0B-4BB0-A34B-68F867B523F0" /* IcosphereAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = IcosphereAction.h; path = ../../../addons/ofxRules/src/actions/IcosphereAction.h; sourceTree = SOURCE_ROOT; };
+		"B941ECAB-3B38-4DDD-B0B4-A5FB36CEA2A1" /* PlaneAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PlaneAction.cpp; path = ../../../addons/ofxRules/src/actions/PlaneAction.cpp; sourceTree = SOURCE_ROOT; };
+		"C3715A13-768B-47A5-850A-8C57C09158CD" /* RuleSet.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = RuleSet.cpp; path = ../../../addons/ofxRules/src/RuleSet.cpp; sourceTree = SOURCE_ROOT; };
+		"CD72BBB5-1A3F-4ECD-ACAF-1E8BAD62C6C2" /* Rules.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Rules.cpp; path = ../../../addons/ofxRules/src/Rules.cpp; sourceTree = SOURCE_ROOT; };
+		"DE853EEE-5F29-48DD-97CD-9014B227F0E8" /* Rule.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Rule.cpp; path = ../../../addons/ofxRules/src/Rule.cpp; sourceTree = SOURCE_ROOT; };
+		"DF4FC6B6-6FD6-4776-923E-187EC2AB4AA0" /* Action.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Action.h; path = ../../../addons/ofxRules/src/actions/Action.h; sourceTree = SOURCE_ROOT; };
+		"E416088A-33DB-46A3-881A-EED5A25395A8" /* testApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* example-file-liveDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-file-liveDebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		EF484E10699C9165272D3F8D /* Rules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Rules.h; path = ../../../addons/ofxRules/src/Rules.h; sourceTree = SOURCE_ROOT; };
-		F45ACC67CF0E5D062E74B2D5 /* TransformAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TransformAction.h; path = ../../../addons/ofxRules/src/actions/TransformAction.h; sourceTree = SOURCE_ROOT; };
-		FB17FDC32C5BB8F13AA6C243 /* PointAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PointAction.cpp; path = ../../../addons/ofxRules/src/actions/PointAction.cpp; sourceTree = SOURCE_ROOT; };
-		FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxmlparser.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		"E8B8FAB9-E6B3-42E9-A809-5E75C703615D" /* Branch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Branch.cpp; path = ../../../addons/ofxRules/src/Branch.cpp; sourceTree = SOURCE_ROOT; };
+		"EDE3AE7E-F0B9-4A1B-B0D1-59B4C7F1CD50" /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
+		"F2E0006E-FC39-418E-919A-D699041177E5" /* ofxRules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxRules.h; path = ../../../addons/ofxRules/src/ofxRules.h; sourceTree = SOURCE_ROOT; };
+		"F6E9A93F-768F-4283-BAD8-4C50FDB2860D" /* TransformAction.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TransformAction.h; path = ../../../addons/ofxRules/src/actions/TransformAction.h; sourceTree = SOURCE_ROOT; };
+		"F72EC74A-E818-4085-AE4B-479B8CCB01EB" /* Rules.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Rules.h; path = ../../../addons/ofxRules/src/Rules.h; sourceTree = SOURCE_ROOT; };
+		"FCE629C7-AE34-4531-B1E5-CAD5F7A9D358" /* TransformAction.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TransformAction.cpp; path = ../../../addons/ofxRules/src/actions/TransformAction.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,125 +98,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */ = {
+		"00CAF3AB-2DC2-4FB5-94D9-38AAE8222281" /* ofxRules */ = {
 			isa = PBXGroup;
 			children = (
-				6ECEF0D76BC33727823EADFF /* src */,
-				6E54289412D2D94F45A05113 /* libs */,
-			);
-			name = ofxXmlSettings;
-			sourceTree = "<group>";
-		};
-		457D001CB6496008EBD7E1DD /* ofxRules */ = {
-			isa = PBXGroup;
-			children = (
-				5A2C336F37E66091FC054235 /* src */,
+				"7DC77458-951B-451E-A14F-B6749AC22536" /* src */,
 			);
 			name = ofxRules;
-			sourceTree = "<group>";
+			path = ../../../addons/ofxRules;
+			sourceTree = SOURCE_ROOT;
 		};
-		488F5FD2B4CB8EBA0AA12ED6 /* actions */ = {
+		"0E3B5C9E-55EE-4AF0-BF2A-73AD17C47FDE" /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				DA2003DFDB8A5CD594D1A2BF /* Action.cpp */,
-				D92E1E535416ED8523996A95 /* Action.h */,
-				4CBD2C758FB6082F09A40020 /* ConeAction.cpp */,
-				2D1BA25C8AABF5548A01D066 /* ConeAction.h */,
-				997BB7CC94CC0CFAFA480FD0 /* CubeAction.cpp */,
-				680681F06CE81313E3B7453E /* CubeAction.h */,
-				BFD66E348EEB3DF4BFAE18C1 /* IcosphereAction.cpp */,
-				C50AF4C1463185E28C033934 /* IcosphereAction.h */,
-				0A68ED46E9F6EC9C38585AEA /* LineAction.cpp */,
-				92DF20DDA4F8D1A41C982114 /* LineAction.h */,
-				8E90595CEDF4D6EECCAA4DCE /* PlaneAction.cpp */,
-				BFC32BE12FA32E270DECF4EF /* PlaneAction.h */,
-				FB17FDC32C5BB8F13AA6C243 /* PointAction.cpp */,
-				269EE8109C5B1CC470B4C730 /* PointAction.h */,
-				15457B582405A907FF0E16C7 /* TransformAction.cpp */,
-				F45ACC67CF0E5D062E74B2D5 /* TransformAction.h */,
-				0C2E5605F1947CE0B69247ED /* TubeAction.cpp */,
-				6E9F3175E0383B24D42ECB40 /* TubeAction.h */,
-			);
-			name = actions;
-			sourceTree = "<group>";
-		};
-		5A2C336F37E66091FC054235 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				488F5FD2B4CB8EBA0AA12ED6 /* actions */,
-				230524C8F1BC00D48C902E05 /* Branch.cpp */,
-				E4ADE8F38C2224B218B64F2B /* Branch.h */,
-				A337FD41DE60AEFF6B069938 /* ofxRules.h */,
-				85B2ED66B235B728CD2512E1 /* Rule.cpp */,
-				C3E63BB591679A4715FC3B0A /* Rule.h */,
-				74274F2A9C4726E149B2DB93 /* Rules.cpp */,
-				EF484E10699C9165272D3F8D /* Rules.h */,
-				B2185EBB4B9CCEC9C614D8F6 /* RuleSet.cpp */,
-				D65F00315B5DF6E53BA58E90 /* RuleSet.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
-		6948EE371B920CB800B5AC1A /* local_addons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = local_addons;
-			sourceTree = "<group>";
-		};
-		6E54289412D2D94F45A05113 /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				2B40EDA85BEB63E46785BC29 /* tinyxml.cpp */,
-				B21E7E5F548EEA92F368040B /* tinyxml.h */,
-				832BDC407620CDBA568B713D /* tinyxmlerror.cpp */,
-				FC5DA1C87211D4F6377DA719 /* tinyxmlparser.cpp */,
+				"4B05D99C-5DB5-4B65-93BE-5C7CFD73D292" /* tinyxml.cpp */,
+				"3F462BDC-56D6-4BAC-8A38-F909DF2C6890" /* tinyxml.h */,
+				"EDE3AE7E-F0B9-4A1B-B0D1-59B4C7F1CD50" /* tinyxmlerror.cpp */,
+				"1AD174FA-B9C7-4FA3-A71B-0ED96D416740" /* tinyxmlparser.cpp */,
 			);
 			name = libs;
-			sourceTree = "<group>";
+			path = ../../../addons/ofxXmlSettings/libs;
+			sourceTree = SOURCE_ROOT;
 		};
-		6ECEF0D76BC33727823EADFF /* src */ = {
+		"7DC77458-951B-451E-A14F-B6749AC22536" /* src */ = {
 			isa = PBXGroup;
 			children = (
-				50DF87D612C5AAE17AAFA6C0 /* ofxXmlSettings.cpp */,
-				01DCC0911400F9ACF5B65578 /* ofxXmlSettings.h */,
+				"E8B8FAB9-E6B3-42E9-A809-5E75C703615D" /* Branch.cpp */,
+				"411D97F4-F2EC-41B0-AE81-9AF31A4DE9F6" /* Branch.h */,
+				"DE853EEE-5F29-48DD-97CD-9014B227F0E8" /* Rule.cpp */,
+				"062A5628-E305-4BE4-9DA7-5843CFE2A781" /* Rule.h */,
+				"C3715A13-768B-47A5-850A-8C57C09158CD" /* RuleSet.cpp */,
+				"9B909B96-89DC-49BE-ADCA-CB75680A77CC" /* RuleSet.h */,
+				"CD72BBB5-1A3F-4ECD-ACAF-1E8BAD62C6C2" /* Rules.cpp */,
+				"F72EC74A-E818-4085-AE4B-479B8CCB01EB" /* Rules.h */,
+				"FCB06610-C2C1-4FCB-830A-CB77A6DFB541" /* actions */,
+				"F2E0006E-FC39-418E-919A-D699041177E5" /* ofxRules.h */,
 			);
 			name = src;
-			sourceTree = "<group>";
+			path = ../../../addons/ofxRules/src;
+			sourceTree = SOURCE_ROOT;
+		};
+		"89A533C6-4A9A-4B0B-BCF8-2665900D3BDB" /* ofxXmlSettings */ = {
+			isa = PBXGroup;
+			children = (
+				"0E3B5C9E-55EE-4AF0-BF2A-73AD17C47FDE" /* libs */,
+				"9A2BF097-5FA7-47FD-8913-A4EB1481C12F" /* src */,
+			);
+			name = ofxXmlSettings;
+			path = ../../../addons/ofxXmlSettings;
+			sourceTree = SOURCE_ROOT;
+		};
+		"9A2BF097-5FA7-47FD-8913-A4EB1481C12F" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"00E45D86-A8D8-466E-83F8-9F9C53BE5A51" /* ofxXmlSettings.cpp */,
+				"2AF7B20F-61AF-431B-B14D-038D35F54832" /* ofxXmlSettings.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxXmlSettings/src;
+			sourceTree = SOURCE_ROOT;
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				457D001CB6496008EBD7E1DD /* ofxRules */,
-				1F4FB5C423662B96ADFDCC0B /* ofxXmlSettings */,
+				"00CAF3AB-2DC2-4FB5-94D9-38AAE8222281" /* ofxRules */,
+				"89A533C6-4A9A-4B0B-BCF8-2665900D3BDB" /* ofxXmlSettings */,
 			);
 			name = addons;
-			sourceTree = "<group>";
-		};
-		E4328144138ABC890047C5CB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
-			);
-			name = Products;
+			path = ../../../addons;
 			sourceTree = "<group>";
 		};
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				191CD6FA2847E21E0085CBB6 /* of.entitlements */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
-				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				191EF70929D778A400F35F26 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
-				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* example-file-liveDebug.app */,
 			);
 			sourceTree = "<group>";
@@ -234,20 +190,37 @@
 			isa = PBXGroup;
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				00A1BFCBB38848AD0E0C8539 /* testApp.cpp */,
-				2D129AB0F7D46B8DFCEADEDB /* testApp.h */,
+				"71FB53CE-58B9-4B86-962F-E31819D07EFD" /* testApp.cpp */,
+				"E416088A-33DB-46A3-881A-EED5A25395A8" /* testApp.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
-		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+		"FCB06610-C2C1-4FCB-830A-CB77A6DFB541" /* actions */ = {
 			isa = PBXGroup;
 			children = (
-				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
-				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+				"4D020228-01CD-4108-BB99-1562AE7392EC" /* Action.cpp */,
+				"DF4FC6B6-6FD6-4776-923E-187EC2AB4AA0" /* Action.h */,
+				"A83D928F-5E55-4866-9B93-97DDD1BB04C8" /* ConeAction.cpp */,
+				"7423C4E1-B6AC-4521-906E-5870296B0A76" /* ConeAction.h */,
+				"8C851A2F-D1BC-4246-A711-D79A98C1A17F" /* CubeAction.cpp */,
+				"221A701E-BB3D-4F24-BC74-3D766066AA05" /* CubeAction.h */,
+				"92BC9AF4-5998-4AA9-B549-66B6FF2DF8DC" /* IcosphereAction.cpp */,
+				"B7E24232-7E0B-4BB0-A34B-68F867B523F0" /* IcosphereAction.h */,
+				"4FDC59E5-941E-46CE-989A-E12701B8D675" /* LineAction.cpp */,
+				"6E2FB073-EA09-41B0-AF30-48DF0D4DEA56" /* LineAction.h */,
+				"B941ECAB-3B38-4DDD-B0B4-A5FB36CEA2A1" /* PlaneAction.cpp */,
+				"4C5B7673-3645-4621-9591-6C2478D89C8B" /* PlaneAction.h */,
+				"0E2435F5-F531-4BCE-87ED-7C98C64FDBB3" /* PointAction.cpp */,
+				"187D3592-C0EE-47E0-AC89-F0AD578CE86A" /* PointAction.h */,
+				"FCE629C7-AE34-4531-B1E5-CAD5F7A9D358" /* TransformAction.cpp */,
+				"F6E9A93F-768F-4283-BAD8-4C50FDB2860D" /* TransformAction.h */,
+				"1C9B3788-9234-4A6D-8D6E-E62A3EE64451" /* TubeAction.cpp */,
+				"85D9F696-B0B7-4800-80BF-4277E4CC77A4" /* TubeAction.h */,
 			);
-			name = openFrameworks;
-			sourceTree = "<group>";
+			name = actions;
+			path = ../../../addons/ofxRules/src/actions;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -256,15 +229,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "example-file-live" */;
 			buildPhases = (
+				E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */,
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
-				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
 				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				E4A5B60F29BAAAE400C2D356 /* CopyFiles */,
+				19B789C429E5AB4A0082E9B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
 			name = "example-file-live";
 			productName = myOFApp;
@@ -281,23 +255,15 @@
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "example-file-live" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
+				Base,
 			);
 			mainGroup = E4B69B4A0A3A1720003C02F2;
 			productRefGroup = E4B69B4A0A3A1720003C02F2;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E4328144138ABC890047C5CB /* Products */;
-					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E4B69B5A0A3A1756003C02F2 /* example-file-live */,
@@ -305,29 +271,40 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = openFrameworksDebug.a;
-			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+		19B789C429E5AB4A0082E9B8 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+			);
+			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rsync -aved ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved ../../../libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+			shellScript = "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script — Compile OF";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -337,72 +314,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				29D734F0DDECC8C5978185D7 /* testApp.cpp in Sources */,
-				7019120E8781C12FA9AFA5DB /* Action.cpp in Sources */,
-				7C74C0E9368C47FF556E33DA /* ConeAction.cpp in Sources */,
-				BF29A0A58D32DF5295707E86 /* CubeAction.cpp in Sources */,
-				1551F35BCC831111B664BE5A /* IcosphereAction.cpp in Sources */,
-				41C1B6A049F720B359E347B5 /* LineAction.cpp in Sources */,
-				13F66488E3830D4B149684DE /* PlaneAction.cpp in Sources */,
-				CFAD515E953DDB46A2A5E9B2 /* PointAction.cpp in Sources */,
-				149DA15B77FA25677DEB0A23 /* TransformAction.cpp in Sources */,
-				42A8F0F6EA7DCD87BEECBF3F /* TubeAction.cpp in Sources */,
-				4A3ADDC2EDF4B33A6D2E5EBE /* Branch.cpp in Sources */,
-				EEFC82DBFAC63414A172652D /* Rule.cpp in Sources */,
-				9EF5885C3D7A476AC67A82B5 /* Rules.cpp in Sources */,
-				4FA5D5B79E39177F7FA92296 /* RuleSet.cpp in Sources */,
-				63B57AC5BF4EF088491E0317 /* ofxXmlSettings.cpp in Sources */,
-				933A2227713C720CEFF80FD9 /* tinyxml.cpp in Sources */,
-				9D44DC88EF9E7991B4A09951 /* tinyxmlerror.cpp in Sources */,
-				5A4349E9754D6FA14C0F2A3A /* tinyxmlparser.cpp in Sources */,
+				"418361EF-CFBD-40F5-9A08-98FF864EC9CB" /* testApp.cpp in Sources */,
+				"B8545085-170F-4744-BAA9-408713176C9B" /* Branch.cpp in Sources */,
+				"C10F4E97-6437-490D-A8D4-FC6D9DD56E83" /* Rule.cpp in Sources */,
+				"28EF44D6-7F57-47C1-96CB-48A0261C0924" /* RuleSet.cpp in Sources */,
+				"A87C893B-C035-44CC-834B-80A7688B7A98" /* Rules.cpp in Sources */,
+				"4347673D-4488-49B2-A7A1-4D24145FE028" /* Action.cpp in Sources */,
+				"B18972C9-DF35-46DF-B6CF-98F1BDB692E6" /* ConeAction.cpp in Sources */,
+				"AE6C46CF-E10F-4A3A-A392-F12B4128BF31" /* CubeAction.cpp in Sources */,
+				"D8F97787-91D5-488F-A3C3-F4A6DA704522" /* IcosphereAction.cpp in Sources */,
+				"42BB8D38-FD4A-4627-82E5-376ECC580D68" /* LineAction.cpp in Sources */,
+				"59F6563B-8F3D-4A9B-BE2E-AD9E841F65B7" /* PlaneAction.cpp in Sources */,
+				"91434D13-F95A-4067-BA79-F9661303DFF2" /* PointAction.cpp in Sources */,
+				"41279C90-7FD3-4A9F-9C97-186D0B07C459" /* TransformAction.cpp in Sources */,
+				"927DAD19-6613-4BAF-A858-16AE7FB9EAA3" /* TubeAction.cpp in Sources */,
+				"1D09A02D-22C0-47C5-975D-379C883D23FE" /* tinyxml.cpp in Sources */,
+				"EF88CDC7-806A-4FD5-B763-02F2AE68CCED" /* tinyxmlerror.cpp in Sources */,
+				"034D5586-6C74-494D-8C53-16202FA2B2AC" /* tinyxmlparser.cpp in Sources */,
+				"B34CE60D-0270-490D-99EA-73D3004FDF6A" /* ofxXmlSettings.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = openFrameworks;
-			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
-				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					../../../addons/ofxRules/src,
-					../../../addons/ofxRules/src/actions,
-					../../../addons/ofxXmlSettings/libs,
-					../../../addons/ofxXmlSettings/src,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CPLUSPLUSFLAGS = (
-					"-D__MACOSX_CORE__",
-					"-mtune=native",
-				);
-				SDKROOT = macosx;
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
 			};
 			name = Debug;
 		};
@@ -410,36 +359,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
 				COPY_PHASE_STRIP = YES;
-				DEAD_CODE_STRIPPING = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_UNROLL_LOOPS = YES;
-				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
-				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = NO;
-				GCC_WARN_UNUSED_VALUE = NO;
-				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
 					src,
-					../../../addons/ofxRules/src,
-					../../../addons/ofxRules/src/actions,
-					../../../addons/ofxXmlSettings/libs,
-					../../../addons/ofxXmlSettings/src,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_CPLUSPLUSFLAGS = (
-					"-D__MACOSX_CORE__",
-					"-mtune=native",
-				);
-				SDKROOT = macosx;
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
 			};
 			name = Release;
 		};
@@ -447,31 +375,25 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = NONE;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
 					src,
 					../../../addons/ofxRules/src,
 					../../../addons/ofxRules/src/actions,
 					../../../addons/ofxXmlSettings/libs,
 					../../../addons/ofxXmlSettings/src,
 				);
-				ICON = "$(ICON_NAME_DEBUG)";
-				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "openFrameworks-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				WRAPPER_EXTENSION = app;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+				);
 			};
 			name = Debug;
 		};
@@ -479,30 +401,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_MODEL_TUNING = NONE;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
+					src,
 					src,
 					../../../addons/ofxRules/src,
 					../../../addons/ofxRules/src/actions,
 					../../../addons/ofxXmlSettings/libs,
 					../../../addons/ofxXmlSettings/src,
 				);
-				ICON = "$(ICON_NAME_RELEASE)";
-				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "openFrameworks-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+				);
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
