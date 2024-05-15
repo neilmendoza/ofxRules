@@ -210,7 +210,7 @@ namespace itg
     void Rules::watchFile(const string& watchedFileName, bool autoCheck, float checkPeriod)
     {
         this->watchedFileName = watchedFileName;
-        watchedLastModified = 0;
+        watchedLastModified = std::filesystem::file_time_type(std::chrono::duration_cast<std::filesystem::file_time_type::duration>(std::chrono::system_clock::duration::zero()));;
         if (autoCheck)
         {
             lastChecked = 0.f;
@@ -231,7 +231,7 @@ namespace itg
     void Rules::checkWatchedFile()
     {
         ofFile watchedFile(watchedFileName);
-        std::time_t time = std::filesystem::last_write_time(watchedFile.getAbsolutePath());
+        std::filesystem::file_time_type time = std::filesystem::last_write_time(watchedFile.getAbsolutePath());
         
         if (time != watchedLastModified)
         {

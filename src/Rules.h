@@ -34,6 +34,7 @@
 #include "ofMain.h"
 #include "RuleSet.h"
 #include "Branch.h"
+#include <filesystem>
 
 namespace itg
 {
@@ -115,7 +116,7 @@ namespace itg
         ofFloatColor wireframeColour;
         
         // file watching stuff
-        std::time_t watchedLastModified;
+        std::filesystem::file_time_type watchedLastModified;
         string watchedFileName;
         float lastChecked;
         float checkPeriod;
